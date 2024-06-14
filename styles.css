@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+  font-family: "Metro Photograph - Demo Version";
   src: url(MetroPhotograph-DemoVersion-Regular.otf);
 }
 
@@ -13,64 +13,110 @@ body {
   font-family: Arial, sans-serif;
   background-color: #9ea39e;
 }
-
-/* nav bar section + optimization */
-.header {
-  width: 100%;
+/* Header */
+.main-navbar {
+  width: 100%; 
   padding: 30px 0;
   background-color: #191353;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; /*fixed fucks up the video on main. even though they werk similarly its prob*/
+  top: 0; /* moves it to the top */
+  z-index: 1000; 
 }
 
-.header-content a:hover{
-  color: #e600ff;
-}
-
-.header-content {
+.main-navbar-content {
   display: flex;
   justify-content: flex-end;
   gap: 50px;
   padding-right: 70px;
 }
 
-.header-content a {
+.main-navbar-content a {
   color: #ffffff;
   font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
   font-size: 48px;
   text-decoration: none;
 }
 
+.main-navbar-content a:hover {
+  color: #e600ff;
+}
+
+/* Sidebar Navigation */
+#navbar {
+  width: 280px;
+  height: 100vh;
+  background-color: #191353;
+  margin-top: -136px;
+  position: fixed; 
+  padding: 20px;
+  z-index: 2000; 
+}
+
+#navbar header {
+  color: #ffffff;
+  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+  font-size: 48px;  
+  padding-left: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #191353;
+}
+
+/* alighing of the sidemenu */
+#navbar ul {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+#navbar ul li {
+  margin-bottom: 30px;
+  margin-right: 5px;
+  list-style: none;
+  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+  
+  /* font-size: 30px; */
+}
+
+#navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#navbar ul li a:hover {
+  color: #e600ff;
+  text-decoration: underline;
+}
+
+#navbar ul li a.sub-menu-text {
+  font-size: 45px;
+  color: #e600ff;
+}
+
+#navbar ul li a.sub-menu-text:hover {
+  text-decoration: none; /* Prevent underline on hover */
+}
+/* Main Content */
+.content {
+  margin-left: 350px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+/* Hero Section */
 .hero-section {
   text-align: center;
   position: relative;
   top: 0;
   z-index: 1;
-  margin-top: 0px;
-}
-
-/* video - opener section */
-
-.sec-background {
-  width: 100%;
-  height: auto;
-  max-width: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
 }
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 40%;   /* moves vid up n down */
+  padding-bottom: 45%; 
   height: 0;
   overflow: hidden;
-  background-color: #9ea39e;
+  background-color: transparent;
 }
 
 .video-wrapper video {
@@ -79,43 +125,56 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  object-fit: cover; 
-  /* tied up my whole video section bs it wraps in the  */
+  object-fit: cover;
 }
 
-/*  about info part */
-
-.main-content {
-  /* padding: 40px 80px; */
-  width: auto;
+/* Main Sections */
+.main-section {
+  min-height: 100vh;
+  width: 100%;
+  border-bottom: 5px dashed #000;
 }
 
+.main-section header {
+  color: #ffffff;
+  font-size: 54px;
+  padding-top: 30px;
+}
+
+.main-section ul li {
+  margin-bottom: 15px;
+  font-size: 35px;
+  background-color: transparent;
+}
+
+.main-section ul li:hover {
+  color: #e600ff;
+}
+
+/* Intro Section */
 .intro-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 90vw; /*distance on the side  */    
+  width: 90vw;
+  margin: 0 auto;
 }
 
-/* custom bg */
 .background-image {
-  position: absolute;  
-  top: 864px;  /* move the bg up n down  */
+  position: absolute;
+  top: 955px;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Move it behind other content */
+  z-index: -1;
 }
 
 .background-image img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Cover the entire container */
-  /* margin-right: 50%; */
+  object-fit: cover;
 }
-
-/* adjustment of the images */
 
 .intro-left {
   flex: 1;
@@ -123,16 +182,16 @@ body {
 
 .intro-left h2 {
   font-family: "CanelaTextTrial-Thin";
-  font-size: 50px;
-  margin: 40px;
+  font-size: 70px;
+  margin: 60px;
   color: #000000;
-  margin-top: auto; /* further adjusting the title for better scrolling experience */
+  margin-top: 5%;
 }
 
-/* the images 2nd scroll */
 .images {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  margin: 20px;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -166,35 +225,41 @@ body {
   font-family: "CanelaTextTrial-Thin";
   font-size: 45px;
   color: #ffffff;
-  margin-right: 20px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  word-wrap: break-word;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 90px;
 }
 
-/* gallery page */
+/* Image Container */
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 
-/* learning outcomes */
-
-
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
 
 /* Responsive Design */
-
 @media (max-width: 768px) {
-  .header-content {
+  .main-navbar-content {
     justify-content: center;
     padding-right: 0;
     gap: 20px;
   }
 
-  @media (max-width: 768px) {
-    .header-content a {
-      font-size: 24px;
-    }
+  .main-navbar-content a {
+    font-size: 24px;
   }
 
-  .main-content {
+  .content {
+    margin-left: 0;
     padding: 20px;
   }
 
@@ -211,4 +276,57 @@ body {
   .images {
     justify-content: center;
   }
+}
+
+/* js */
+.hidden {
+  display: none;
+}
+
+button {
+  background-color:#e600ff;
+  color: white; 
+  padding: 12px 20px; 
+  border: none; 
+  cursor:pointer; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  margin-left: 45px;
+}
+
+button:hover {
+  background-color:#6058a8;
+}
+
+/* Additional Styling */
+h1 {
+  font-size: 100px;
+  color: #191353;
+  margin-top: 200px;
+  font-family: "CanelaTextTrial-Thin";
+}
+
+h2 {
+  font-size: 80px;
+  color: #000000;
+  font-family: "CanelaTextTrial-Thin";
+}
+
+p {
+  line-height: 50px;
+  text-align: justify;
+  margin-right: 50px;
+  padding: 0;
+  font-size: 30px;
+}
+
+.highlight {
+  background: #6a65fc;
+  color: #000;
+  padding: 0 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 125px;
 }

@@ -1,306 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Always Work In Progress</title>
-    <link rel="stylesheet" href="new-styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Always Work In Progress</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
 
-  <body>
-    <div class="second-navbar">
-      <div class="second-navbar-content">
-        <a href="index.html">home</a>
-        <a href="gallery.html">gallery</a>
-        <a href="learningoutcomes.html">learning outcomes</a>
-      </div>
+  <!-- Main Navigation Bar -->
+  <header class="main-navbar">
+    <div class="main-navbar-content">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="learningoutcomes.html">Learning Outcomes</a>
     </div>
-      </header> 
+  </header>
 
-      <nav id="navbar">
-        <div class="divider"></div>
-        <header>MENU</header>
-        <ul>
-          <li><a class="nav-link" href="#Professional Skills">Professional Skills - Personal Website</a></li>
-          <li><a class="nav-link" href="#Second_section">Technical Skills - Personal Websites</a></li>
-          <li><a class="nav-link" href="#Third_section">Reflection - Personal</a></li>
-          <li><a class="nav-link" href="#Fourth_section"> Professional Skills - Group  </a></li>
-          <li><a class="nav-link" href="#Fifth_section"> Technical Skills - Group </a></li>
-          <li><a class="nav-link" href="#Sixth_section">Reflection Group</a></li>
-        </ul>
-      </nav>
+  <!-- Sidebar Navigation -->
+  <nav id="navbar">
+    <div class="divider"></div>
+    <header>menu:</header>
+    
+    <ul>
+      <li><a class="sub-menu-text"><u>Toggle Lists:</u></a></li>
+      <li><button onclick="toggleLists()">Toggle Lists</button></li>
+    </ul>
 
-      <div class="content">
-        <section id="Professional Skills" class="main-section">
-          <header>Пуцай, куме! Пуцай, куме! Пуцай, куме! Пуцай, куме! Пуцай, куме!</header>
-          <p>
-            <code><h1>Professional Skills - Personal Website</h1></code>
-            <!-- lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
-            </p>
-          
-          <ul>
-            <li>Project Organisation - Idea Research </li>
-            <li>Communication and Reporting</li>
-            <li>Exploratory Research</li>
-            <li>Feedback and Reflection</li>
-            <li>Core values</li>
-          </ul>
-          
-          <p>            
-            <code><h2>Project Organisation - Idea Research</h2></code>
-            For my website I chose a mixture of Y2K popular in the early 2010s, blended with a oceanic blue theme which immerses the user in a short story while scrolling. My website speaks for the person I am, not by telling you about my favourite pop-culture - at least not directly. My artistic preferences revolve around news paper-like cutouts which, when combined, reveal their intricate stories. <u>(Or at least I try to)</u> That's why I went for this blend of Y2k aestetic and calming oceanic elements. I found a way to express myself through this style, and by staying thue to myself I allowed the creation of this website to become an actual activity I was looking forward to. 
+    <ul id="visible-list">
+      <li><a class="sub-menu-text"><u>Professional Skills:</u></a></li>
+      <li><a class="nav-link" href="#First_section">Project Organisation</a></li>
+      <li><a class="nav-link" href="#Second_section">Communication & Reporting</a></li>
+      <li><a class="nav-link" href="#Third_section">Exploratory Research</a></li>
+      <li><a class="nav-link" href="#Fourth_section">Feedback and Reflection</a></li>
+      <li><a class="nav-link" href="#Fifth_section">Core values</a></li>
+     
+    
+
+      
+    </ul>
+
+    <ul id="hidden-list" class="hidden">
+      <li><a class="sub-menu-text"><u>Technical Skills:</u></a></li>
+      <li><a class="nav-link" href="#Sixth_section">Trends & developments</a></li>
+      <li><a class="nav-link" href="#Seventh_section">Iterative process</a></li>
+      <li><a class="nav-link" href="#Eight_section">Interactive prototypes</a></li>
+      <li><a class="nav-link" href="#Ninth_section">Target group</a></li>
+    </ul>
+
+    <!-- Trends & developments
+      Iterative process
+    Interactive prototypes
+  Target group -->
+
+  </nav>
+
+  <!-- Main Content -->
+
+  <div id="content1" class="content">
+
+      <h1>Professional Skills - Personal Website</h1>
+         
+        <section id="First_section" class="nav-link"></section>
+            <code><h2>Project Organisation</h2></code>
+          <p>  
+            For my website I chose a mixture of Y2K popular in the early 2010s, blended with a oceanic blue theme which immerses the user in a short story while scrolling. My website speaks for the person I am, not by telling you about my favourite pop-culture - <span class="highlight">at least not directly.</span> My artistic preferences revolve around news paper-like cutouts which, when combined, reveal their intricate stories. <u>(Or at least I try to)</u> That's why I went for this blend of Y2k aestetic and calming oceanic elements. I found a way to express myself through this style, and by staying thue to myself I allowed the creation of this website to become an actual activity I was looking forward to.
+          </p> 
             <br><br>
+            <p>
             For this project I was greatly inflenced by the blend of Worldwide Culture which I obsurved through my lenses as a native Bulgarian, diging into the world I've been so familiar with until now, and trying to interpret it and express it through any means I find suitable. My story is hidden in both visual and audible ones, with some of my "artworks" which will soon be displayed in a "Gallery" section on this website.
+          </p>
             <br><br>
+          <p>
             I dug and drew inspiration from websites I felt like excited me and so these are the most important ones, that brought the website to life:
+          </p>
+            <br>          
+
+            <div class="img-container">
+              <img src="website1.png .png" alt="Website 1">
+              <img src="website101.png" alt="Website 101">
+            </div>
+
             <br>
-            <p>
-              <img src="website1.png .png"> <img src="website101.png">
-            </p>
+          <p>
+          I really like the layout and feeling of <a href="https://www.kauaiweddingplanner.com">this website</a> and the feeling of calmness it brings. One of my biggest inspirations for the choices and layout of the website as you can see in the video and layout similarities.
+          </p>
             <br>
-            I really like the layout and feeling of <a href="https://www.kauaiweddingplanner.com">this website</a> and the feeling of calmness it brings. One of my biggest inspirations for the choices and layout of the website as you can see in the video and layout similarities.
-            <br>
-            <p>
+
+          <div class="img-container">
               <img src="sosche.png"> <img src="oshtesosche.png .png"> <img src="tonovesos.png"> <img src="sos.png">
-            </p>
-            <br>
-            It even allowed me to experiment with the background and add these cuts I made from <a href="https://youtu.be/8zst1f5cZGU?si=RpZk0beyPeSYMiOw">a music video</a> that inspired me further to head in this direction, with it being from a prominent Bulgarian artist named Virgo, influencial for our music scene because of his genre bending sound. By furthering my expression through familiarity I was able to be even more creative with the website's development down the road.
-            <br>
-            <p>
+          </div>
+
+          <br>
+
+          <p>
+          It even allowed me to experiment with the background and add these cuts I made from <a href="https://youtu.be/8zst1f5cZGU?si=RpZk0beyPeSYMiOw">a music video</a> that inspired me further to head in this direction, with it being from a prominent Bulgarian artist named Virgo, influencial for our music scene because of his genre bending sound. By furthering my expression through familiarity I was able to be even more creative with the website's development down the road.
+          </p>
+          
+          <br>
+
+            <div class="img-container">
               <img src="showcase1.png .png"> <img src="showcase2.png .png">
-            </p>
+            </div>
+
             <br>
+            <p>
             Another two big contibutions to the shaping of my idea for the website were <a href="https://triple5soul.com/pages/homepage">555soul clothing website</a> with a really interesting blend of old school and y2k elements, as well as <a href="https://goclub.world">Go!Club, music group from Bulgaria</a> with pastel-like Y2k elements in both their music and visuals.
-            <br>
-            <p>
-              <img src="555soulinspo.png"> <img src="goclubinspo.png">
             </p>
             <br>
-          </p>
+            
+            <div class="img-container">
+              <img src="555soulinspo.png"> <img src="goclubinspo.png">
+            </div>
 
-          <p>            
-            <code><h2>Communication and Reporting</h2></code>
+            <br>
+          
+            <section id="Second_section" class="nav-link"></section>     
+            <code><h2>Communication & reporting</h2></code>
+            <p>
             I've shared my ideas and visions for ym website multiple times, with teachers and with students alike. I'd say that after considering feedback, the design was always changing for the better.
+            </p>
             <br><br>
+            <p>
             Early pitches:
+            </p>
             <br>
-            <p>
+            
+            <div class="img-container">
               <img src="pitchthen1.png .png"> <img src="pitchthen2.png .png"> <img src="pitchthen3.png .png"> <img src="pitchthen4.png .png">
-            </p>
+            </div>
+
             <br>
+            <p>
             With Each feedback the pitches got better and better and by going back to the foundations - the structure - and ensuring those are solid, I managed to improve, because I was seeking feedback and adressing what was going good where I was not as efficient - I was actively looking how to improve:
+           </p>
             <br>
-            <p>
-              <img src="feedbackfigma.png"> <img src="feedbackfigma2.png"> <img src="feedbackfigma3.png"> <img src="feedbackfigma4.png"> 
-              
-            </p>
+
+            <div class="img-container">
+              <img src="feedbackfigma.png"> <img src="feedbackfigma2.png"> <img src="feedbackfigma3.png"> <img src="feedbackfigma4.png">  
+            </div>
+
             <br>
-            <br>Latest pitches:           
-            <p>
+            <br><p>Latest pitches:</p> 
+
+            <div class="img-container">
               <img src="pitchnow1.png"> <img src="pitchnow2.png"> <img src="pitchnow3.png"> <img src="pitchnow4.png"> <img src="feedbackfigma5.png">
-            </p>
+            </div>
+
             <br>
-            <p>
+            <div class="img-container">
               <img src="555soulinspo.png"> <img src="goclubinspo.png">
-            </p>
+            </div>
+
             <br>
 
-          </p>
 
-          <p>            
+
+            <section id="Third_section" class="nav-link"></section>
             <code><h2>Exploratory Research</h2></code>
             
-          </p>
+ 
 
-          <p>            
+            <section id="Fourth_section" class="nav-link"></section>     
             <code><h2>Feedback and Reflection</h2></code>
             irriteration 
-            <p>
+            <div class="img-container">
               <img src="reflectiontalk.png"> 
-            </p>
+            </div>
             
-          </p>
+          
 
-          <p>            
+            <section id="Fifth_section" class="nav-link"></section>     
             <code><h2>Core values</h2></code>
+          <p>  
             add more soon
           </p>        
          
         </section>
 
-        <section id="Second_section" class="main-section">
-          <header>МНОГО ХУБАВА СТОМАНА КОЙ ТИ Я ДАДЕ?</header>
-          <p>
-            <code><h1>Technical Skills - Personal Website</h1></code>
-            <!-- lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
-          </p>
-          <ul>
-            <li>Iterative process</li>
-            <li>Interactive prototypes</li>
-            <li>Target group</li>
-            <li>Feedback and Reflection</li>
-            <li>Goals and Reality - What was I able to learn</li>
-          </ul>
-
-          <p>            
-            <code><h2>Iterative process</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>Interactive prototypes</h2></code>
-            <p>
-              <img src="interactive4.png"> <img src="interactive5.png"> <img src="interactive6.png"> <img src="interactive2.png .png"> <img src="interactive3.png"> 
-            </p>
-          </p>
-
-          <p>            
-            <code><h2>Target group</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>Feedback and Reflection</h2></code>
-            <p>
-              <img src="Techfeedback.png"> <img src="techfeedback2.png .png"> <img src="techslideshow.png"> 
-            </p>
-          </p>
-
-          <p>            
-            <code><h2>Goals and Reality - What was I able to learn</h2></code>
-            Share more feedback (waht i got adviced for iamges - turn itno svgs..), different pixel measurements - px, vw, vh, %, better flexbox usage, slideshow, pokemon card, how ive included these skills into my website ( add the info about the slideshow)
-
-          </p>
-          </ul>
-        </section>
-
-        <section id="Third_section" class="main-section">
-          <header>fart fart fart fart</header>
-          <p>
-            <code><h1>Reflection - Personal</h1></code>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <ul>
-            <li>What did I do better this time?</li>
-            <li>What I would've done better?</li>
-            <li>What I learned?</li>
-            <li>Feedback and Reflection</li>
-            <li>Grading Myself</li>
-          </ul>
-
-          <p>            
-            <code><h2>What did I do better this time?</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>What I would've done better?</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>What I learned?</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>Feedback and Reflection</h2></code>
-          add more
-          </p>
-
-          <p>            
-            <code><h2>Grading Myself</h2></code>
-          soon
-          </p>
-          
-        </section>
-
-        <section id="Fourth_section" class="main-section">
-          <header>Я ДА ВИДИМ ИЗИ ПЕЯ РАБОТИ ЛИ ДА ВЗЕМЕМ ДА ИЗТЕГЛИМ МАЛКО ПАРИ</header>
-          <code><h1>Professional Skills - Group</h1></code>
-          <!-- <p>
-            Fourth section paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p> -->
-          <ul>
-            <li>Project Organisation - Idea Research </li>
-            <li>Communication and Reporting</li>
-            <li>Exploratory Research</li>
-            <li>Feedback and Reflection</li>
-            <li>Core values</li>
-          </ul>
-          
-          <p>            
-            <code><h2>Project Organisation - Idea Research</h2></code>
-            how i contributed (design refignment, pitching, feedback seeking etc)
-          </p>
-
-          <p>            
-            <code><h2>Communication and Reporting</h2></code>
-            add more screenshots and explanations
-          </p>
-
-          <p>            
-            <code><h2>Exploratory Research</h2></code>
-            add more 
-          </p>
-
-          <p>            
-            <code><h2>Feedback and Reflection</h2></code>
-            (teammates feedback and my view on the group adn project itself ethorugh feedback)
-          </p>
-
-          <p>            
-            <code><h2>Core values</h2></code>
-            add more
-          </p>         
-        </section>
-
-        <section id="Fifth_section" class="main-section">
-          <header>Fifth section</header>
-            <header>Я ДА ВИДИМ ИЗИ ПЕЯ РАБОТИ ЛИ ДА ВЗЕМЕМ ДА ИЗТЕГЛИМ МАЛКО ПАРИ</header>
-          <code><h1>Technical Skills - Group</h1></code>
-          <!-- <p>
-            Fourth section paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p> -->
-          <ul>
-            <li>Project Organisation - Idea Research </li>
-            <li>Communication and Reporting</li>
-            <li>Exploratory Research</li>
-            <li>Feedback and Reflection</li>
-            <li>Core values</li>
-          </ul>
-          
-          <p>            
-            <code><h2>Project Organisation - Idea Research</h2></code>
-            add soon
-          </p>
-
-          <p>            
-            <code><h2>Communication and Reporting</h2></code>
-            add soon
-          </p>
-
-          <p>            
-            <code><h2>Exploratory Research</h2></code>
-            add soon
-          </p>
-
-          <p>            
-            <code><h2>Feedback and Reflection</h2></code>
-            add soon
-          </p>
-
-          <p>            
-            <code><h2>Core values</h2></code>
-            add soon
-          </p>         
-        </section>
-      </div>
-    </main>
-
-    <!-- New section wrapped with a unique class -->
-    <div class="new-section">
-      
     </div>
+
+    <div id="content2" class="content hidden">
+      <h1>Technical Skills - Personal Website</h1>
+
+      <section id="Sixth_section" class="nav-link"></section>
+        <code><h2>Trends & developments</h2></code>
+      <p>ssssssssssssssssssssssssssssssssssssssss<br>ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+        ssssssssssssssssssssssssssssssssssssssss<br>
+      </p>
+
+      <section id="Seventh_section" class="nav-link"></section>
+        <code><h2>Iterative process</h2></code>
+      <p>ssssssssssssssssssssssssssssssssssssssss<br>ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+          ssssssssssssssssssssssssssssssssssssssss<br>
+        </p>
+      <!-- Trends & developments
+      Iterative process
+    Interactive prototypes
+  Target group -->
+    </div>
+    
+    
   </body>
 </html>

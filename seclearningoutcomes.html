@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="hero">
+        <div class="slides">
+          <div class="slide first">
+            <!-- First Slide Content -->
+            <nav id="navbar">
+              <div class="divider"></div>
+              <header>MENU</header>
+              <ul>
+                <li><a class="nav-link" href="#First_section">Professional Skills - Personal Website</a></li>
+                <li><a class="nav-link sub-menu" href="#First_section">Project Organisation - Idea Research</a></li>
+                <li><a class="nav-link sub-menu" href="#First_section">Communication and Reporting</a></li>
+                <li><a class="nav-link sub-menu" href="#First_section">Exploratory Research</a></li>
+                <li><a class="nav-link sub-menu" href="#First_section">Feedback and Reflection</a></li>
+                <li><a class="nav-link" href="#Second_section">Technical Skills - Personal Websites</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="slide">
+            <!-- Second Slide Content -->
+            <!-- Your second slide content goes here -->
+          </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
+
+<style>
+    #navbar {
+      width: 280px;
+      height: 100vh;
+      background-color: #191353;
+      color: #ffffff;
+      text-align: left;
+      position: fixed;
+      padding: 20px;
+      overflow: hidden; /* Ensure no overflow from slideshow */
+    }
+  
+    #navbar header {
+      font-size: 24px;
+      padding-bottom: 10px;
+      color: #ffffff;
+      font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+      font-size: 60px;
+      padding-left: 80px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #191353;
+    }
+  
+    #navbar .slideshow-container {
+      width: 100%;
+      height: calc(100vh - 120px); /* Adjusted height for slideshow and header */
+      overflow: hidden;
+    }
+  
+    #navbar .slides {
+      display: flex;
+      transition: margin-left 0.5s ease; /* Added transition for smooth slide effect */
+    }
+  
+    #navbar .slide {
+      width: 100%;
+    }
+  
+    #navbar ul {
+      padding-left: 40px;
+    }
+  
+    #navbar ul li {
+      margin-bottom: 10px;
+      list-style: none;
+      font-size: 16px;
+      font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+      font-size: 30px;
+      margin-bottom: 20px;
+      margin-right: 5px;
+    }
+  
+    #navbar ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding: 8px 0;
+    }
+  
+    #navbar ul li a:hover {
+      color: #e600ff;
+    }
+  
+    .navigator {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px; /* Adjusted right position */
+    }
+  
+    .bar {
+      display: block;
+      width: 20px; /* Adjusted width */
+      height: 5px; /* Adjusted height */
+      background-color: #ffffff;
+      margin-bottom: 5px; /* Adjusted margin */
+      cursor: pointer;
+    }
+  
+    /* Slideshow controls */
+    #button1:checked ~ .slides {
+      margin-left: 0;
+    }
+  
+    #button2:checked ~ .slides {
+      margin-left: -100%; /* Adjusted slide width */
+    }
+  </style>
+  

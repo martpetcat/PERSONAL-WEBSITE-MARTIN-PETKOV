@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle UL Components</title>
+  <style>
+    /* Additional CSS for demonstration */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-navbar">
+    <div class="main-navbar-content">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="learningoutcomes.html">Learning Outcomes</a>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav id="navbar">
+    <div class="divider"></div>
+    <header>menu:</header>
+    <ul>
+      <li><a class="sub-menu-text"><u>Toggle Lists:</u></a></li>
+      <li><button onclick="toggleLists()">Toggle Lists</button></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Visible UL -->
+    <ul id="visible-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <!-- Hidden UL -->
+    <ul id="hidden-list" class="hidden">
+      <li>Hidden Item 1</li>
+      <li>Hidden Item 2</li>
+      <li>Hidden Item 3</li>
+      <li>Hidden Item 4</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleLists() {
+      var visibleList = document.getElementById('visible-list');
+      var hiddenList = document.getElementById('hidden-list');
+
+      if (visibleList.classList.contains('hidden')) {
+        // Switch to visible list
+        visibleList.classList.remove('hidden');
+        hiddenList.classList.add('hidden');
+      } else {
+        // Switch to hidden list
+        visibleList.classList.add('hidden');
+        hiddenList.classList.remove('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>
