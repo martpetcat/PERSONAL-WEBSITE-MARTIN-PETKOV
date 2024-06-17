@@ -246,6 +246,52 @@ body {
   margin: 10px;
 }
 
+/* more accurate */
+
+.image-align {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
+  padding: 10px;
+  flex-wrap: wrap; 
+  max-width: 100%; 
+}
+
+.image-align img {
+  max-width: 50%; 
+  height: auto; 
+}
+
+.large-image {
+  width: 60%; 
+}
+
+.small-image {
+  width: 30%;
+}
+
+
+/* two on one line  */
+
+.image-2-aline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
+  gap: 10px; 
+  margin: 0;
+}
+
+.image-2-aline img {
+  /* 653.5 x 538.03 */
+  /*
+   width: 100%; 
+  height: 100%;  */
+  width: auto;
+  object-fit: cover; 
+  max-width: 100%; 
+  max-height: auto; 
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .main-navbar-content {
@@ -300,17 +346,38 @@ button:hover {
 
 /* Additional Styling */
 h1 {
-  font-size: 100px;
+  font-size: 140px;
   color: #191353;
-  margin-top: 200px;
-  font-family: "CanelaTextTrial-Thin";
+  font-family: "Metro Photograph - Demo Version";
+  text-decoration: underline;
+  text-align: center;
+  margin: 120px;
 }
 
 h2 {
-  font-size: 80px;
+  font-size: 100px;
   color: #000000;
-  font-family: "CanelaTextTrial-Thin";
+  /* font-family: "CanelaTextTrial-Thin"; */
+  font-family: "Metro Photograph - Demo Version";
 }
+
+h3 {
+  font-size: 35px;
+  font-style: oblique;
+  color: #000000;
+  margin: 120px;
+  /* padding: 10px; */
+  text-align: center;
+}
+
+h4 {
+  font-size: 80px;
+  font-style: oblique;
+  color: #d80404;
+  font-family: "Metro Photograph - Demo Version";
+  /* text-decoration:underline; */
+}
+
 
 p {
   line-height: 50px;
@@ -318,11 +385,13 @@ p {
   margin-right: 50px;
   padding: 0;
   font-size: 30px;
+  /* font-family: "CanelaTextTrial-Thin"; */
+  
 }
 
-.highlight {
+.h-light {
   background: #6a65fc;
-  color: #000;
+  /* color: #000; */
   padding: 0 5px;
 }
 
