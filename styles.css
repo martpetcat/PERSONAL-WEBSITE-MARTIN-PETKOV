@@ -425,3 +425,25 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 125px;
 }
+
+/*  GALLERY */
+
+.gallery-background {
+  display: flex;             
+  flex-wrap: wrap;           /* Allows items to wrap to the next line */
+  justify-content: center;  
+  align-items: center;      
+  width: 100%;               
+  max-width: 2000px;         
+  margin: auto;              
+  padding: 20px;             
+  box-sizing: border-box;    /* Includes padding and border in the element's total width and height */
+  background-color: #000; 
+}
+
+.gallery-background img {
+  flex: 1 1 200px;           /* Allows images to grow and shrink, with a base size */
+  max-width: 100%;           /* Ensures images do not exceed the container's width */
+  height: auto;              /* Maintains the aspect ratio of the images */
+  margin: 1px;              
+}
