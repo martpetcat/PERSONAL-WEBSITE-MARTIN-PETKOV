@@ -461,9 +461,9 @@ html {
 
 .foreground-image {
   position: absolute;
-  width: 500px; 
-  height: 1000px; 
-  top: 300px; 
+  width: 700px; 
+  height: 2000px; 
+  top: 0; 
 }
 
 .left-image {
@@ -477,7 +477,7 @@ html {
   max-width: 100%;  
   position: absolute;
   width: 750px; 
-  height: 1500px; 
+  height: 1000px; 
   top: 0px;  
 }
 
