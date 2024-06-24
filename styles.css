@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #9ea39e;
+  background-color: #6d96cc;
 }
 /* Header */
 .main-navbar {
@@ -35,6 +35,7 @@ body {
   font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
   font-size: 48px;
   text-decoration: none;
+  
 }
 
 .main-navbar-content a:hover {
@@ -49,7 +50,8 @@ body {
   margin-top: -136px;
   position: fixed; 
   padding: 20px;
-  z-index: 2000; 
+  z-index: 2000;    
+  
 }
 
 #navbar header {
@@ -60,11 +62,13 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #191353;
+
 }
 
 /* alighing of the sidemenu */
 #navbar ul {
-  margin-top: 0;
+  margin-top: 0;  
+  
 }
 
 #navbar ul li {
@@ -143,13 +147,13 @@ body {
 
 .main-section ul {
   padding: 0;
-  list-style: none;
+  list-style: none;  
 }
 
 .main-section ul li {
   margin-bottom: 15px;
   font-size: 35px;
-  background-color: transparent;
+  background-color: transparent;  
 }
 
 .main-section ul li:hover {
@@ -420,7 +424,7 @@ p {
 }
 
 .h-light {
-  background: #6a65fc;
+  background: #ffd900;
   padding: 0 5px;
 }
 
@@ -458,7 +462,12 @@ html {
   flex: 1 1 200px;           /* Allows images to grow and shrink, with a base size */
   max-width: 100%;           
   height: auto;              
-  margin: 10px;    
+  margin: 10px;      
+  /* user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-drag: none;
+  -webkit-user-select: none; 
+  -ms-user-select: none;  */
 }
 
 .foreground-image {
