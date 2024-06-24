@@ -399,14 +399,23 @@ h4 {
   font-family: "Metro Photograph - Demo Version";
 }
 
+h5 {
+  font-size: 40px;
+  color: #ffffff;
+  font-style: none;
+  font-family: "Metro Photograph - Demo Version";
+  background-color: #000000;
+  padding: 40px;
+}
+
 p {
-  line-height: 50px; /* Space between lines of text */
+  line-height: 50px; 
   text-align: justify;
-  margin-top: 100px; /* Adds space above the paragraph */
-  margin-bottom: 100px; /* Adds space below the paragraph */
-  margin-right: 50px; /* Keeps existing right margin */
-  margin-left: 20px; /* Adds space to the left of the paragraph */
-  padding: 10px; /* Adds space inside the paragraph */
+  margin-top: 100px; 
+  margin-bottom: 100px; 
+  margin-right: 50px; 
+  margin-left: 20px; 
+  padding: 10px;
   font-size: 30px;
 }
 
@@ -427,23 +436,82 @@ html {
 }
 
 /*  GALLERY */
-
 .gallery-background {
   display: flex;             
-  flex-wrap: wrap;           /* Allows items to wrap to the next line */
+  flex-wrap: wrap;           
   justify-content: center;  
   align-items: center;      
   width: 100%;               
-  max-width: 2000px;         
+  max-width: 1500px;         
   margin: auto;              
-  padding: 20px;             
-  box-sizing: border-box;    /* Includes padding and border in the element's total width and height */
-  background-color: #000; 
+  padding: 480px;             
+  box-sizing: border-box;   
+  background-color: #000000; 
+  position: relative;       
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
 .gallery-background img {
   flex: 1 1 200px;           /* Allows images to grow and shrink, with a base size */
-  max-width: 100%;           /* Ensures images do not exceed the container's width */
+  max-width: 100%;           
   height: auto;              /* Maintains the aspect ratio of the images */
   margin: 1px;              
+}
+
+.foreground-image {
+  position: absolute;
+  width: 500px; 
+  height: 1000px; 
+  top: 300px; 
+}
+
+.left-image {
+  left: 40px; 
+}
+
+.middle-image {
+  left: 50%; 
+  transform: translateX(-50%);
+  height: auto;
+  max-width: 100%;  
+  position: absolute;
+  width: 750px; 
+  height: 1500px; 
+  top: 0px;  
+}
+
+.center-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%; 
+  padding: 0px; 
+}
+
+.center-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; 
+}
+
+.right-image {
+  right: 40px; 
+}
+
+.footer-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
