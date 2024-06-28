@@ -266,16 +266,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
   flex-wrap: wrap;
   max-width: 100%;
 }
 
 .image-align img {
-  max-width: 100%;
-  height: auto;
+  height: auto;  
   width: auto;
+  max-width: 700px;
 }
 
 /* Responsive Design */
