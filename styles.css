@@ -1,25 +1,31 @@
 @font-face {
   font-family: "Metro Photograph - Demo Version";
-  src: url(MetroPhotograph-DemoVersion-Regular.otf);
+  src: url('MetroPhotograph-DemoVersion-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: "CanelaTextTrial-Thin";
-  src: url(CanelaText-Thin-Trial.otf);
+  src: url('CanelaText-Thin-Trial.otf') format('opentype');
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #6d96cc;
+  background-color: #19135390;
 }
+
+#logo img {
+  max-height: 200px;
+  width: auto;
+}
+
 /* Header */
 .main-navbar {
   width: 100%; 
   padding: 30px 0;
   background-color: #191353;
-  position: sticky; /*fixed fucks up the video on main. even though they werk similarly its prob*/
-  top: 0; /* moves it to the top */
+  position: sticky; 
+  top: 0; 
   z-index: 1000; 
 }
 
@@ -35,50 +41,43 @@ body {
   font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
   font-size: 48px;
   text-decoration: none;
-  
 }
 
 .main-navbar-content a:hover {
   color: #EF7BFC;
 }
 
-/* Sidebar Navigation */
+/* Sidebar Navi */
 #navbar {
   width: 280px;
   height: 100vh;
   background-color: #191353;
-  margin-top: -136px;
-  position: fixed; 
+  position: fixed;
   padding: 20px;
-  z-index: 2000;    
-  
+  z-index: 2000;
 }
 
-#navbar header {
+/* #navbar header {
   color: #ffffff;
   font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
-  font-size: 48px;  
+  font-size: 50px;
   padding-left: 80px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #191353;
+} */
 
-}
-
-/* alighing of the sidemenu */
+/* Aligning of the sidemenu */
 #navbar ul {
-  margin-top: 0;  
-  
+  margin-top: 0;
 }
 
 #navbar ul li {
   margin-bottom: 25px;
   margin-right: 5px;
-  /* margin-top: 10%; */
   list-style: none;
-  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
-  
-  /* font-size: 30px; */
+  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;  
+  font-size: 35px;
 }
 
 #navbar ul li a {
@@ -98,9 +97,10 @@ body {
 }
 
 #navbar ul li a.sub-menu-text:hover {
-  text-decoration: none; /* Prevent underline on hover */
+  text-decoration: none;
 }
-/* Main Content */
+
+/* Main */
 .content {
   margin-left: 350px;
   margin-top: 30px;
@@ -147,7 +147,7 @@ body {
 
 .main-section ul {
   padding: 0;
-  list-style: none;  
+  list-style: none;
 }
 
 .main-section ul li {
@@ -245,7 +245,7 @@ body {
   margin-top: 90px;
 }
 
-/* Image Container */
+/* Img Container */
 .img-container {
   display: flex;
   flex-direction: row;
@@ -262,49 +262,20 @@ body {
 }
 
 /* more accurate */
-
 .image-align {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 30px; 
-  padding: 10px;
-  flex-wrap: wrap; 
-  max-width: 100%; 
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .image-align img {
-  max-width: 50%; 
-  height: auto; 
-}
-
-.large-image {
-  width: 60%; 
-}
-
-.small-image {
-  width: 30%;
-}
-
-
-/* two on one line  */
-
-.image-2-aline {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
-  gap: 10px; 
-  margin: 0;
-}
-
-.image-2-aline img {
-  /* 653.5 x 538.03 */
-  /*
-   width: 100%; 
-  height: 100%;  */
+  max-width: 100%;
+  height: auto;
   width: auto;
-  object-fit: cover; 
-  max-width: 100%; 
-  max-height: auto; 
 }
 
 /* Responsive Design */
@@ -358,18 +329,20 @@ body {
 }
 
 button {
-  background-color:#b00cc3;
-  color: white; 
-  padding: 12px 20px; 
+  background-color: #b00cc3;
+  color: ffffff; 
+  padding: 16px 24px; 
   border: none; 
-  cursor:pointer; 
+  cursor: pointer; 
   border-radius: 4px; 
   font-size: 16px; 
-  margin-left: 45px;
+  margin-left: 25px;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 button:hover {
-  background-color:#EF7BFC;
+  background-color: #EF7BFC;
 }
 
 /* Additional Styling */
@@ -383,53 +356,46 @@ h1 {
 }
 
 h2 {
-  font-size: 100px;
-  color: #000000;
+  font-size: 120px;
+  color: #ffffff;
   font-family: "Metro Photograph - Demo Version";
 }
 
+/* description text */
 h3 {
-  font-size: 35px;
+  font-size: 40px;
   font-style: oblique;
   color: #000000;
   margin: 120px;
   text-align: center;
 }
 
+/* steps text */
 h4 {
-  font-size: 80px;
+  font-size: 100px;
   font-style: oblique;
-  color: #191353;
+  color: #000;
   font-family: "Metro Photograph - Demo Version";
-}
-
-h5 {
-  font-size: 40px;
-  color: #ffffff;
-  font-style: none;
-  font-family: "Metro Photograph - Demo Version";
-  background-color: #000000;
-  padding: 40px;
 }
 
 p {
-  line-height: 50px; 
+  line-height: 45px; 
   text-align: justify;
-  margin-top: 100px; 
-  margin-bottom: 100px; 
+  margin-top: 50px; 
+  margin-bottom: 50px; 
   margin-right: 50px; 
   margin-left: 20px; 
-  padding: 10px;
+  padding: 20px;
   font-size: 30px;
+  border-radius: 5px;
 }
 
 .h-light {
-  background: #ffd900;
+  background: #ff8800;
   padding: 0 5px;
 }
 
 .h-link {
-  /* background:#af62b8; */
   padding: 0 5px;
   color: #000000;
 }
@@ -439,35 +405,27 @@ html {
   scroll-padding-top: 125px;
 }
 
-
-/*  GALLERY */
+/* GALLERY */
 .gallery-background {
   display: flex;             
   flex-wrap: wrap;           
   justify-content: center;  
   align-items: center;      
   width: 100%;               
-  max-width: auto;         
   margin: auto;              
   padding: 650px;             
   box-sizing: border-box;   
   background-color: #000000; 
   position: relative;       
   background-attachment: fixed;
-  background-size: cover; 
-  /* margin-top: 50px;  */
+  background-size: cover;
 }
 
 .gallery-background img {
-  flex: 1 1 200px;           /* Allows images to grow and shrink, with a base size */
+  flex: 1 1 200px;          
   max-width: 100%;           
   height: auto;              
   margin: 10px;      
-  /* user-select: none; 
-  -moz-user-select: none; 
-  -webkit-user-drag: none;
-  -webkit-user-select: none; 
-  -ms-user-select: none;  */
 }
 
 .foreground-image {
@@ -512,7 +470,7 @@ html {
 
 .right-image {
   right: 40px; 
-  padding-bottom: 20px; /* Added padding to the bottom */
+  padding-bottom: 20px; 
 }
 
 .footer-image {
