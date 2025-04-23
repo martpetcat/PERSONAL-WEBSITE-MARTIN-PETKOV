@@ -1,0 +1,509 @@
+@font-face {
+  font-family: "Metro Photograph - Demo Version";
+  src: url('MetroPhotograph-DemoVersion-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "CanelaTextTrial-Thin";
+  src: url('CanelaText-Thin-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "The Queen Marker";
+  src: url("The Queen Marker.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #5C5470;
+}
+
+#logo img {
+  max-height: 200px;
+  width: auto;
+}
+
+
+/* Header */
+.main-navbar {
+  width: 100%; 
+  padding: 30px 0;
+  background-color: #5C5470;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  display: flex;
+  justify-content:space-evenly;
+  gap: 50px;
+  padding-right: 70px;
+  
+}
+
+.main-navbar-content {
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding-right: 70px;
+  font-family: "The Queen Marker", Arial, sans-serif;
+
+}
+
+.main-navbar-content a {
+  mix-blend-mode: difference;
+  font-family: "The Queen Marker", Arial, sans-serif;
+  font-size: 48px;
+  text-decoration: none;
+}
+
+.main-navbar-content a:hover {
+  color: #ffffff;
+}
+
+/* Sidebar Navi */
+/* #navbar {
+  width: 280px;
+  height: 100vh;
+  background-color: #191353;
+  position: fixed;
+  padding: 20px;
+  z-index: 2000;
+} */
+
+/* #navbar header {
+  color: #ffffff;
+  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;
+  font-size: 50px;
+  padding-left: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #191353;
+} */
+
+/* Aligning of the sidemenu */
+#navbar ul {
+  margin-top: 0;
+}
+
+#navbar ul li {
+  margin-bottom: 25px;
+  margin-right: 5px;
+  list-style: none;
+  font-family: "Metro Photograph - Demo Version", Arial, sans-serif;  
+  font-size: 35px;
+}
+
+#navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#navbar ul li a:hover {
+  color: #EF7BFC;
+  text-decoration: underline;
+}
+
+#navbar ul li a.sub-menu-text {
+  font-size: 45px;
+  color: #EF7BFC;
+}
+
+#navbar ul li a.sub-menu-text:hover {
+  text-decoration: none;
+}
+
+/* Main */
+.content {
+  margin-left: 350px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 45%; 
+  height: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.video-wrapper video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* Main Sections */
+.main-section {
+  min-height: 100vh;
+  width: 100%;
+  border-bottom: 5px dashed #000;
+}
+
+.main-section header {
+  color: #EF7BFC;
+  font-size: 54px;
+  padding-top: 30px;
+}
+
+.main-section ul {
+  padding: 0;
+  list-style: none;
+}
+
+.main-section ul li {
+  margin-bottom: 15px;
+  font-size: 35px;
+  background-color: transparent;  
+}
+
+.main-section ul li:hover {
+  color: #EF7BFC;
+}
+
+.section-divider {
+  border: none; 
+  border-top: 2px dashed #000000; 
+  margin: 20px 0; 
+}
+
+/* Intro Section */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-top: 100px;
+}
+
+.background-image {
+  position: absolute;
+  top: 955px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.intro-left {
+  flex: 1;
+}
+
+.intro-left h2 {
+  font-family: "CanelaTextTrial-Thin";
+  font-size: 70px;
+  margin: 60px;
+  color: #000000;
+  margin-top: 5%;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.first-image,
+.second-image {
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+  margin: 40px;
+}
+
+.second-image {
+  width: 400px;
+  height: 528px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  display: block;
+}
+
+.intro-right {
+  flex: 1;
+  max-width: 32%;
+  text-align: right;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  font-family: "CanelaTextTrial-Thin";
+  font-size: 45px;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 90px;
+}
+
+/* Img Container */
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+/* more accurate */
+.image-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.image-align img {
+  height: auto;  
+  width: auto;
+  max-width: 700px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-navbar-content {
+    justify-content: center;
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .main-navbar-content a {
+    font-size: 24px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro-text {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .images {
+    justify-content: center;
+  }
+
+  .main-section ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-section ul li {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* js */
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: #b00cc3;
+  color: ffffff; 
+  padding: 16px 24px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  margin-left: 25px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #EF7BFC;
+}
+
+/* Additional Styling */
+h1 {
+  font-size: 140px;
+  color: #191353;
+  font-family: "Metro Photograph - Demo Version";
+  text-decoration: underline;
+  text-align: center;
+  margin: 120px;
+}
+
+h2 {
+  font-size:40px;
+  color: #ffffff;
+  /* font-family: "Metro Photograph - Demo Version"; */
+  font-family: "The Queen Marker", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* description text */
+h3 {
+  font-size: 60px;
+  font-style:normal;
+  font-weight: normal;
+  font-family: "The Queen Marker", Aial, sans-serif;
+  color: #ffffff;
+  margin: 60px;
+  text-align: center;
+}
+
+/* steps text */
+h4 {
+  font-size: 100px;
+  font-style: oblique;
+  color: #000;
+  font-family: "Metro Photograph - Demo Version";
+}
+
+p {
+  line-height: 45px; 
+  text-align: justify;
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+  margin-right: 50px; 
+  margin-left: 20px; 
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.h-light {
+  background: #ff8800;
+  padding: 0 5px;
+}
+
+.h-link {
+  padding: 0 5px;
+  color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 125px;
+}
+
+/* GALLERY */
+.gallery-background {
+  display: flex;             
+  flex-wrap: wrap;           
+  justify-content: center;  
+  align-items: center;      
+  width: 100%;               
+  margin: auto;              
+  padding: 650px;             
+  box-sizing: border-box;   
+  background-color: transparent ; 
+  position: relative;       
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.gallery-background img {
+  flex: 1 1 200px;          
+  max-width: 100%;           
+  height: auto;              
+  margin: 10px;      
+}
+
+.foreground-image {
+  position: absolute;
+  width: 700px; 
+  height: 1000px; 
+  top: 0; 
+}
+
+.left-image {
+  left: 40px; 
+  padding-bottom: 20px;
+}
+
+.middle-image {
+  left: 50%; 
+  transform: translateX(-50%);
+  height: auto;
+  max-width: 100%;  
+  position: absolute;
+  width: 700px; 
+  height: 2000px; 
+  top: 120px;  
+}
+
+.center-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%; 
+  padding: 0px; 
+}
+
+.center-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; 
+}
+
+.right-image {
+  right: 40px; 
+  padding-bottom: 20px; 
+}
+
+.footer-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

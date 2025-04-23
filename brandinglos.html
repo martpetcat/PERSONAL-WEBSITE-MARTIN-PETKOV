@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)file:///C:/Fontys/AlwaysWorkInProgress/THIS%20IS%20THE%20FOLDER/PERSONAL-WEBSITE-MARTIN-PETKOV/brandinglos.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding Project Wireframe</title>
+    <link rel="stylesheet" href="./brandinglos_files/styles.css">
+
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4b6c2f; 
+
+}
+
+.image-container {
+            margin-bottom: 20px;
+        }
+        .translation-link {
+            display: block;
+            margin-top: 5px;
+            font-size: 16px;
+            color: rgb(200, 200, 255);
+            text-decoration: underline;
+        }
+        
+    /* Navigation Bar Fix */
+.main-navbar {
+  width: 100%; 
+  padding: 30px 0;
+  background-color: #ffffff;
+  position: fixed; 
+  top: 0; 
+  z-index: 1000; 
+  display: flex;
+  justify-content:space-evenly;
+  gap: 50px;
+  padding-right: 70px;
+  
+}
+
+.main-navbar-content {
+  /* mix-blend-mode: difference; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding-right: 70px;
+  font-family: "The Queen Marker", Arial, sans-serif;
+
+}
+
+.main-navbar-content a {
+  mix-blend-mode: difference;
+  font-family: "The Queen Marker", Arial, sans-serif;
+  font-size: 48px;
+  text-decoration: none;
+}
+
+.main-navbar-content a:hover {
+  color: #ffffff;
+}
+
+
+        /* Sidebar Fix */
+        .side-menu {
+            width: 220px;
+            background-color: #4b6c2f;
+            height: 100vh;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            top: 38px; /* Adjusted to avoid overlap */
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .side-menu .icon {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .side-menu button {
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #6d8f46;
+            border: none;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Learning Outcomes Section */
+        .learning-outcomes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .learning-outcomes {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 90%;
+        }
+
+        .learning-outcomes button {
+            padding: 10px;
+            background-color: #5c7733;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .learning-outcomes button:hover {
+            background-color: #7fa963;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+            padding-top: 60px; /* Avoids navbar overlap */
+        }
+
+        .project-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .sub-header {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Spotify Embed */
+        .spotify-container {
+            /* background-color: #d3d3d3; */
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+            height: 352px;
+        }
+
+        /* Learning Outcomes Content */
+        .lo-section {
+            background-color: #5c7733;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .lo-section h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+
+    <!-- Navbar -->
+  <!-- Navigation Bar -->
+  <header class="main-navbar">
+    <nav class="main-navbar-content">
+      <a href="file:///C:/Fontys/AlwaysWorkInProgress/THIS%20IS%20THE%20FOLDER/PERSONAL-WEBSITE-MARTIN-PETKOV/index.html">Home</a>
+      <a href="file:///C:/Fontys/AlwaysWorkInProgress/THIS%20IS%20THE%20FOLDER/PERSONAL-WEBSITE-MARTIN-PETKOV/gallery.html">Gallery</a>
+      <a href="file:///C:/Fontys/AlwaysWorkInProgress/THIS%20IS%20THE%20FOLDER/PERSONAL-WEBSITE-MARTIN-PETKOV/projects.html">Projects Menu</a>
+      <a href="file:///C:/Fontys/AlwaysWorkInProgress/THIS%20IS%20THE%20FOLDER/PERSONAL-WEBSITE-MARTIN-PETKOV/learningoutcomes.html">Learning Outcomes</a>
+    </nav>
+  </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="side-menu">
+        <div class="icon"></div>
+        <button>Branding Project</button>
+        <button>Fix UX Project</button>
+        <button>Sprint X Project</button>
+
+        <!-- Learning Outcomes Buttons Below Menu -->
+        <div class="learning-outcomes-container">
+            <!-- <h3>Learning Outcomes</h3> -->
+            <div class="learning-outcomes">
+                <button onclick="scrollToSection(&#39;LO1&#39;)">LO 1</button>
+                <button onclick="scrollToSection(&#39;LO2&#39;)">LO 2</button>
+                <button onclick="scrollToSection(&#39;LO3&#39;)">LO 3</button>
+                <button onclick="scrollToSection(&#39;LO4&#39;)">LO 4</button>
+                <button onclick="scrollToSection(&#39;LO5&#39;)">LO 5</button>
+                <button onclick="scrollToSection(&#39;LO6&#39;)">LO 6</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="project-title">Branding Assingment</div>
+        <div class="sub-header">Overview</div>
+
+        <!-- Spotify Embed (Correctly Positioned) -->
+        <iframe style="border-radius:12px" src="./brandinglos_files/4eCykg8Pf6zzoPTbw51eJd.html" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <!-- Learning Outcomes Sections -->
+        <div class="lo-section" id="LO1">
+            <h2>LO 1: Interactive Media Design</h2>
+            <p>In this learning outcome you orient in the relevant tech, media and design landscape and create interactive media products that you have tested with users and stakeholders. You show how you tested your products, what your inspiration is and other reasons why you made your designs the way that they are.</p>
+            <p></p>
+        </div>
+
+        <div class="lo-section" id="LO2">
+            <h2>LO 2: Documentation &amp; Version Control</h2>
+            <p>Managing and organizing project files, tracking progress, and ensuring structured documentation.</p>
+        </div>
+
+        <div class="lo-section" id="LO3">
+            <h2>LO 3: Professional Design Practices</h2>
+            <p>Understanding the iterative process and refining designs based on feedback.</p>
+        </div>
+
+        <div class="lo-section" id="LO4">
+            <h2>LO 4: Research &amp; Professional Standards</h2>
+            <p>Conducting industry-standard research and implementing best practices in branding.</p>
+        </div>
+
+        <div class="lo-section" id="LO5">
+            <h2>LO 5: Communication &amp; Presentation</h2>
+            <p>Enhancing project presentations and communicating design decisions effectively.</p>
+            <div style="text-align: center;">
+                <img src="./brandinglos_files/lo5-1.png" alt="boyan bg video shooter ig" width="1000px">
+                <img src="./brandinglos_files/lo5-2.png" alt="boyan bg video shooter ig" width="1000px"> 
+                <div class="image-container">
+                    <img src="./brandinglos_files/lo5-3.png" alt="Chat Screenshot 1" width="1000">
+                    <a href="sandbox:/mnt/data/translated_chat.pdf" class="translation-link" target="_blank">
+                        View Translated Chat (PDF)
+                    </a>
+                </div>
+            
+                <div class="image-container">
+                    <img src="./brandinglos_files/lo5-4.png" alt="Chat Screenshot 2" width="1000">
+                    <a href="sandbox:/mnt/data/translated_chat.pdf" class="translation-link" target="_blank">
+                        View Translated Chat (PDF)
+                    </a>
+                </div> 
+            </div> 
+        </div>
+
+
+
+        <p>Summary:
+
+            A recognized videographer from my country engaged with my post, reinforcing my presence in the creative space. His continued interaction with my content shows that my work holds value and relevance within professional circles. This serves as proof that my branding and visuals not only attract attention but also spark discussions, demonstrating real-world industry engagement and networking (LO5: 1).
+            
+        </p>
+
+        <div class="lo-section" id="LO6">
+            <h2>LO 6: Professional Identity</h2>
+            <p>Building a strong personal and professional brand identity through research and experimentation.</p>
+
+            <iframe style="border-radius:12px" src="./brandinglos_files/7bg2DQr6SocElmWlYGch9n.html" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p>A personal playlist I made which was meant to represent the values of my brand "AWIP" I've been building upon which is tied to a large libary collection of playlists I've made which tie to my physical branding as I envelop my collages with songs that can be found even in this playlist.</p>
+            <div style="text-align: center;">
+                <img src="./brandinglos_files/lo6.png" alt="LO6 Image" width="1000px">
+                <img src="./brandinglos_files/lo6pic2.png" alt="LO6 Image" width="1000px">
+            </div>
+            <p>Ex. 1, 2 - personal collages I've made throughout the semester for my personal Instagram for fun. Previewed it with teachers who greatly supported my vision such as my coach and a teacher my coach introduced me to - berry who's a painter based in Eindhoven. When I came froward with questions about career advice both teachers were extesively helpful in helping me decide what the best decision would've been for me as I was feeling stuck and unsure about my studies at the beginning of the semester but after these convesations I was able to find not only an answer to my worries but also support which gave me more drive to continue my studies here.</p>
+            <div style="text-align: center;">
+                <img src="./brandinglos_files/coachig.png" alt="lody ig" width="1000px">
+                <img src="./brandinglos_files/teachig.png" alt="berryy ig" width="1000px"> 
+                <img src="./brandinglos_files/advice1.png" alt="berryy ig" width="1000px"> 
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Smooth Scroll -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+
+</body></html>

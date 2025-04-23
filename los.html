@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Outcomes</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="main-navbar">
+    <nav class="main-navbar-content">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="projects.html">Projects Menu</a>
+      <a href="learningoutcomes.html">Learning Outcomes</a>
+    </nav>
+  </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="side-menu">
+        <div class="icon"></div>
+        <button>Branding Project</button>
+        <button>Create UX Project</button>
+        <button>Personal Project</button>
+        <button>Development Project</button>
+
+
+        <!-- Learning Outcomes Buttons Below Menu -->
+        <div class="learning-outcomes-container">
+            <!-- <h3>Learning Outcomes</h3> -->
+            <div class="learning-outcomes">
+                <button onclick="scrollToSection('LO1')">LO 1</button>
+                <button onclick="scrollToSection('LO2')">LO 2</button>
+                <button onclick="scrollToSection('LO3')">LO 3</button>
+                <button onclick="scrollToSection('LO4')">LO 4</button>
+                <button onclick="scrollToSection('LO5')">LO 5</button>
+                <button onclick="scrollToSection('LO6')">LO 6</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="project-title">Branding Project</div>
+        <div class="sub-header">Martin Petkov</div>
+
+        <!-- Spotify Embed (Correctly Positioned) -->
+        <div class="spotify-container">
+            <img src="hikeone.png">
+        </div>
+
+        <!-- Learning Outcomes Sections -->
+        <div class="lo-section" id="LO1">
+            <h2>LO 1: Interactive Media Design</h2>
+            <p>In this learning outcome you orient in the relevant tech, media and design landscape and create interactive media products that you have tested with users and stakeholders. You show how you tested your products, what your inspiration is and other reasons why you made your designs the way that they are.</p>
+            <p></p>
+        </div>
+
+        <div class="lo-section" id="LO2">
+            <h2>LO 2: Documentation & Version Control</h2>
+            <p>Managing and organizing project files, tracking progress, and ensuring structured documentation.</p>
+        </div>
+
+        <div class="lo-section" id="LO3">
+            <h2>LO 3: Professional Design Practices</h2>
+            <p>Understanding the iterative process and refining designs based on feedback.</p>
+        </div>
+
+        <div class="lo-section" id="LO4">
+            <h2>LO 4: Research & Professional Standards</h2>
+            <p>Conducting industry-standard research and implementing best practices in branding.</p>
+        </div>
+
+        <div class="lo-section" id="LO5">
+            <h2>LO 5: Communication & Presentation</h2>
+            <p>Enhancing project presentations and communicating design decisions effectively.</p>
+        </div>
+
+        <div class="lo-section" id="LO6">
+            <h2>LO 6: Professional Identity</h2>
+            <p>Building a strong personal and professional brand identity through research and experimentation.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Smooth Scroll -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

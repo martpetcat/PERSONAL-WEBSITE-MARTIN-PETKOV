@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toggle UL Components</title>
-  <style>
-    /* Additional CSS for demonstration */
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Layout</title>
+    <link rel="stylesheet" href="stylesnew.css"> 
 </head>
 <body>
 
-  <!-- Main Navigation Bar -->
-  <header class="main-navbar">
-    <div class="main-navbar-content">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="learningoutcomes.html">Learning Outcomes</a>
-    </div>
-  </header>
+    <!-- <div class="navbar">
+        <span>Home</span>
+        <span>Gallery</span>
+        <span>Learning Outcomes</span>
+        <span>Projects</span>
+    </div> -->
 
-  <!-- Sidebar Navigation -->
-  <nav id="navbar">
-    <div class="divider"></div>
-    <header>menu:</header>
-    <ul>
-      <li><a class="sub-menu-text"><u>Toggle Lists:</u></a></li>
-      <li><button onclick="toggleLists()">Toggle Lists</button></li>
-    </ul>
-  </nav>
+    <div class="container">
+        <div class="section-title">Projects:</div>
 
-  <!-- Main Content -->
-  <div class="content">
-    <!-- Visible UL -->
-    <ul id="visible-list">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-    </ul>
+        <!-- FLEXBOX WRAPPER FOR SPOTIFY + PROJECTS -->
+        <div class="content-wrapper">
 
-    <!-- Hidden UL -->
-    <ul id="hidden-list" class="hidden">
-      <li>Hidden Item 1</li>
-      <li>Hidden Item 2</li>
-      <li>Hidden Item 3</li>
-      <li>Hidden Item 4</li>
-    </ul>
-  </div>
+            <!-- Left side: Spotify Embed -->
+            <div class="spotify-container">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/3m3gTsWLc71qEZkHajLKmP?utm_source=generator" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
 
-  <script>
-    function toggleLists() {
-      var visibleList = document.getElementById('visible-list');
-      var hiddenList = document.getElementById('hidden-list');
+            <!-- Right side: Projects -->
+            <div class="projects">
+                <div class="project-card">
+                    <img src="branding.png" alt="Branding">
+                    <a href="brandinglos.html" class="button"><img src="button-brand.png" alt="button"></a>
+                </div>
 
-      if (visibleList.classList.contains('hidden')) {
-        // Switch to visible list
-        visibleList.classList.remove('hidden');
-        hiddenList.classList.add('hidden');
-      } else {
-        // Switch to hidden list
-        visibleList.classList.add('hidden');
-        hiddenList.classList.remove('hidden');
-      }
-    }
-  </script>
+                <div class="project-card">
+                    <img src="ux-redesign.png" alt="UX Redesign">
+                    <a href="uxlos.html" class="button"><img src="button-ux.png" alt="button"></a>
+                </div>
+
+                <div class="project-card">
+                    <img src="sprint-x.png" alt="Sprint X">
+                    <a href="sprintlos.html" class="button"><img src="button-sprint.png" alt="button"></a>
+                </div>
+            </div>
+
+        </div> <!-- End of content-wrapper -->
+
+    </div> <!-- End of container -->
 
 </body>
 </html>

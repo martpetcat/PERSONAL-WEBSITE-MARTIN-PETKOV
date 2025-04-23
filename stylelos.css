@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "Metro Photograph - Demo Version";
+    src: url('MetroPhotograph-DemoVersion-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "CanelaTextTrial-Thin";
+    src: url('CanelaText-Thin-Trial.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "The Queen Marker";
+    src: url("The Queen Marker.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    transition: background-color 2s ease-in-out;
+    overflow-x: hidden;
+}
+
+.main-navbar {
+    width: 100%; 
+    padding: 30px 0;
+    background-color: #000000;
+    position:sticky;
+    top: 0; 
+    z-index: 1000; 
+    display: flex;
+    justify-content:space-around;
+    gap: 50px;
+    padding-right: 70px;
+    
+  }
+
+  .main-navbar-content a {
+
+    font-family: "The Queen Marker", Arial, sans-serif;
+    font-size: 60px;
+    text-decoration: none;
+  }
+
+.main-navbar-content a {
+    /* border: 2px solid rgba(0, 0, 0, 0.1); */
+    /* background-color: transparent; */
+    font-family: "The Queen Marker", Arial, sans-serif;
+    font-size: 48px;
+    text-decoration: none;
+    color: #3a532b;
+}
+
+.main-navbar-content a:hover {
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 40px 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.side-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 80px);
+    background-color: #3a532b;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-menu button {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #6d8f46;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "The Queen Marker", Arial, sans-serif;
+}
+
+.side-menu button:hover {
+    background-color: #7fa963;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.project-title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: "The Queen Marker", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.spotify-container {
+    background-color: #3a532b;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    height: 352px;
+}
+
+.lo-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lo-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    font-family: "The Queen Marker", Arial, sans-serif;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container h3 {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.048);
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* What to Add Section */
+.what-to-add {
+    background-color: #3a532b;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.what-to-add h3 {
+    color: #FFD700;
+}
+
+.what-to-add ul {
+    padding-left: 20px;
+}
+
+.lo-section h2 {
+    margin-bottom: 10px;
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+

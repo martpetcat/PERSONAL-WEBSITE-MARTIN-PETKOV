@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    transition: background-color 2s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+/* Header */
+.main-navbar {
+  width: 100%; 
+  padding: 30px 0;
+  background-color: #000000;
+  position:sticky;
+  top: 0; 
+  z-index: 1000; 
+  display: flex;
+  justify-content:space-evenly;
+  gap: 50px;
+  padding-right: 70px;
+  
+}
+
+.main-navbar-content {
+  /* mix-blend-mode: difference; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding-right: 70px;
+  font-family: "The Queen Marker", Arial, sans-serif;
+
+}
+
+.main-navbar-content a {
+
+  font-family: "The Queen Marker", Arial, sans-serif;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+.main-navbar-content a:hover {
+  color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 40px 40px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: center; /* Makes sure all projects are centered */
+    align-items: flex-start; /* Aligns everything at the top */
+    gap: 60px; /* Ensures equal space between project cards */
+    flex-wrap: wrap;
+    width: 100%;
+    
+    margin: auto; /* Centers the entire projects section */
+}
+
+/* Individual Project Card */
+.project-card {
+    width: 330px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Project Images */
+.project-card img {
+    height: auto;
+    max-height: 80%;
+}
+
+/* Buttons */
+.button {
+    display:block;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button img:hover {
+    transform: scale(1.05);
+}
+
+/* SPOTIFY Embed -Projects */
+.spotify-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 150px 0; /* Equal padding on top and bottom */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.spotify-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 0; /* Equal padding on top and bottom */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main-navbar {
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    padding-top: 100px; /* Push content down to avoid overlap */
+}
+
+
+
+/* RESPONSIVE FIXES */
+@media (max-width: 1024px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+}
