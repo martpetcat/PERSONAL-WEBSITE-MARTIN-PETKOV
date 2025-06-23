@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cartoons Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-button">&larr; Back to Quizstafette</a>
+    <h1>Cartoons Quiz</h1>
+  </header>
+
+  <main>
+    <section class="quiz-intro">
+      <p>Welcome to the Cartoons quiz! Enjoy 13 questions suitable for ages 10 and up.</p>
+      <button id="start-quiz-btn">Start Quiz</button>
+    </section>
+
+    <section id="quiz-container" style="display:none;">
+      <!-- Quiz questions will go here -->
+      <p>Quiz functionality coming soon!</p>
+    </section>
+  </main>
+
+  <script>
+    const startBtn = document.getElementById('start-quiz-btn');
+    const intro = document.querySelector('.quiz-intro');
+    const quizContainer = document.getElementById('quiz-container');
+
+    startBtn.addEventListener('click', () => {
+      intro.style.display = 'none';
+      quizContainer.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -13,107 +13,769 @@
     <nav class="main-navbar-content">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
-      <a href="projects.html">Projects Menu</a>
+      <!-- <a href="projects.html">Projects Menu</a> -->
       <a href="learningoutcomes.html">Learning Outcomes</a>
     </nav>
   </header>
 
-  <!-- Sidebar Navigation -->
-  <div class="side-menu">
-    <br>
+  <!-- Sidebar -->
+  <aside class="side-menu">
     <h2>Projects</h2>
     <button onclick="loadProject('branding')">Branding Project</button>
-    <button onclick="loadProject('fixux')">Fix UX Project</button>
-    <button onclick="loadProject('sprintx')">Sprint X Project</button>
+    <button onclick="loadProject('fixux')">UX Project</button>
+    <button onclick="loadProject('projectx')">Project X</button>
 
-    <!-- Learning Outcomes Buttons -->
     <div class="learning-outcomes-container">
       <h2>Learning Outcomes</h2>
       <div class="learning-outcomes">
-        <button onclick="scrollToSection('LO1')">LO 1</button>
-        <button onclick="scrollToSection('LO2')">LO 2</button>
-        <button onclick="scrollToSection('LO3')">LO 3</button>
-        <button onclick="scrollToSection('LO4')">LO 4</button>
-        <button onclick="scrollToSection('LO5')">LO 5</button>
-        <button onclick="scrollToSection('LO6')">LO 6</button>
+        <button onclick="scrollToSection('LO1')">LO 1 – Explore</button>
+        <button onclick="scrollToSection('LO2')">LO 2 – Develop</button>
+        <button onclick="scrollToSection('LO3')">LO 3 – Design</button>
+        <button onclick="scrollToSection('LO4')">LO4 – Deliver</button>
+        <button onclick="scrollToSection('LO5')">LO 5 – Lead</button>
+        <button onclick="scrollToSection('LO6')">LO 6 – Reflect</button>
       </div>
     </div>
-  </div>
+  </aside>
 
   <!-- Main Content -->
-  <div class="main-content">
-    <!-- Default welcome -->
-    <div id="default-message">
-      <h2>Welcome to my "Learning Outcomes" Page! If you made it here, you're probably a teacher of mine.. Go ahead, pick a tune..., I've curated some vibes just for you. We've got a variety of flavous 🎧</h2>
-      <p>Please select a playlist from the menu while you browse through the outcomes.</p>
-      <!-- Spotify Playlists -->
+  <main class="main-content">
+    <section id="default-message">
+
+      <h2>Welcome to my "Learning Outcomes" Page!</h2>
+      <p>If you made it here, you're probably a teacher of mine. Go ahead, pick a tune... I've curated some vibes just for you. 🎧</p>
+      <!-- <p>Please select a playlist from the menu while you browse through the outcomes.</p> -->
+
       <div class="spotify-scroll">
-        <iframe src="https://open.spotify.com/embed/playlist/3i3s1MPE4iVv0NnyVz0hvI?utm_source=generator&theme=0" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed/playlist/4zHOiLidaUDV5wd7ToUwwv?utm_source=generator" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed/playlist/6fUhWklPhHK2NQWlMvpGeM?" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed/playlist/3m3gTsWLc71qEZkHajLKmP?" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+        <iframe src="https://open.spotify.com/embed/playlist/3i3s1MPE4iVv0NnyVz0hvI?utm_source=generator&theme=0" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/4zHOiLidaUDV5wd7ToUwwv?utm_source=generator" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/6fUhWklPhHK2NQWlMvpGeM" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/3m3gTsWLc71qEZkHajLKmP" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
-    </div>
+    </section>
 
-    <!-- Dynamic Project Content -->
-    <div id="dynamic-content" style="display: none;"></div>
+    <section id="dynamic-content" style="display: none;"></section>
 
-    <!-- Learning Outcomes -->
-    <div class="lo-section" id="LO1">
-      <h2>LO 1: Interactive Media Design and User-Centric Development</h2>
-      <p>This learning outcome is demonstrated through prototypes and media concepts that were developed, tested, and refined based on user feedback and UX principles.</p>
-    </div>
+    
+  </main>
 
-    <div class="lo-section" id="LO2">
-      <h2>LO 2: Front-End Development: Coding, Documentation, and Version Control</h2>
-      <p>This learning outcome is demonstrated through structured project management, organized documentation, and progress tracking to ensure a professional and efficient workflow.</p>
-    </div>
-
-    <div class="lo-section" id="LO3">
-      <h2>LO 3: Professional Design Tool Proficiency and Iterative Visual Design</h2>
-      <p>Understanding the iterative process and refining designs based on feedback.</p>
-    </div>
-
-    <div class="lo-section" id="LO4">
-      <h2>LO 4: Research & Professional Standards</h2>
-      <p>Conducting appropriate exploratory research methods, practicing clear communication, structured teamwork, and professionally organized documentation and reporting.</p>
-    </div>
-
-    <div class="lo-section" id="LO5">
-      <h2>LO 5: Communication & Presentation</h2>
-      <p>Enhancing project presentations and communicating design decisions effectively.</p>
-    </div>
-
-    <div class="lo-section" id="LO6">
-      <h2>LO 6: Professional Identity</h2>
-      <p>Building a strong personal and professional brand identity through research and experimentation.</p>
-    </div>
-  </div>
-
-  <!-- Project Templates -->
+  <!-- Templates -->
   <template id="branding">
     <div>
-      <div class="project-title">Branding Project</div>
-      <div class="sub-header">Martin Petkov</div>
-      <iframe src="http://go.microsoft.com/fwlink/p/?LinkId=255141" width="100%" height="600px"></iframe>
+      <h2 class="project-title">Branding Project</h2>
+      <p class="sub-header">Martin Petkov</p>
+      <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://open.spotify.com/playlist/3SISKSOD7SFwZ3ZCwEcurz?si=3620733b432844c7" allowfullscreen></iframe> -->
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/en1JVhSd6vK2nCbIY5OB8w/PRJ1-Mood-Boards?node-id=194-4&embed-host=share" allowfullscreen></iframe>
     </div>
+
+    <!-- LO Sections -->
+    <section class="lo-section" id="LO1">
+      <h2>LO 1: Interactive Media Products</h2>
+      <p>Prototypes and media concepts that were developed, tested, and refined based on user feedback and UX principles.</p>
+      <p>What was expected:
+      Create interactive prototypes or media designs.
+      Focus on user needs and feedback during development.
+      Show how you designed and improved your work based on user experience principles.</p>
+
+      <div class="columns">
+        <div class="col">
+          <h3>GOAL - Research to kickstart </h3>
+          <p>I researched Owen Bryce’s emotional narrative through our group's documentation of the brand, Instagram stories, Discord chats, and song lyrics. Using Figma, I created chaotic stylescapes and early wireframes that reflected my vision of the brand and the broader emotions while helping my teammates with the development of the "main" version of the website. I had focused on alternative wireframes and stylescapes inspired by Owen Bryce's emotional narrative, drawn from Discord chats, song lyrics, and team discussions. I explored a seasonal, emotionally reflective theme, contrasting the main group's summer lofi aesthetic. I supported my process with evidence like Spotify album covers, lyric-based moodboards, and gradients reflecting emotional tone. I believe this added was a good creative risk nontheless. I created some stylescapes which I'd iterate further after helping my teammates with some photos and the design of the mockups</p>
+          <div class="image-row">
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/inspiration.png" alt="Early wireframe" onclick="zoomImage(this)">
+            </div>
+
+            <div>
+            <img src="semester2-module2-cmk2/iterations-projects/branding/references/owen-moodboard.png" alt="Creating stylescapes" onclick="zoomImage(this)">
+
+            <p class="image-row-p">Owen Bryce's music choices and style scapes - Figma - helped me come up with style scapes ideas</p>
+            </div>
+          </div>
+
+          <p>Following the traces the project holder had given me I began creating my own style scapes and later began implementing into wireframes</p>
+
+          <div class="image-row">
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-1.png" alt="Stylescape example" onclick="zoomImage(this)">
+              <p class="image-row-p">My early styles capes</p>
+            </div>
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-2.png" alt="Creating stylescapes" onclick="zoomImage(this)">
+              <p class="image-row-p">My early styles capes - inverted colors</p>
+            </div>
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/album-to-color.png "  alt="Creating stylescapes" onclick="zoomImage(this)">
+              <p class="image-row-p">My early styles capes - inverted colors and albums covers I used<br> as inspiration along with assets I created.</p>
+            </div>
+            
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/early-concept1.png" alt="Early wireframe" onclick="zoomImage(this)">
+              <p class="image-row-p">Early Mock Ups - page 3 and 4</p>
+            </div>
+
+            <div>
+              <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/wireframes-2.png" alt="Early wireframe" onclick="zoomImage(this)">
+              <p class="image-row-p">Early Mock Ups - page 3 and 4</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <h3>Feedback - Discovered</h3>
+          <p>The client interacted with us on Discord and would post lyrics and song snippets which further helped me build upon the seasonal versions which idea   </p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/feedback-add-and-remove.png" alt="Peer feedback styles" onclick="zoomImage(this)">
+          </div>
+          <div>
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/comparison-versions.png" alt="Before/after comparison" onclick="zoomImage(this)">
+            <!-- <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/figmapack1.png" alt="Feedback iteration" onclick="zoomImage(this)"> -->
+          </div>
+        </div>
+
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Early prototyping revealed usability gaps and emotional mismatches, teaching me the importance of integrating user feedback with creative vision. I recognized how even small adjustments can improve both clarity and emotional impact.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/branding-wireframes1.png" alt="Midpoint wireframe" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-1.png" alt="Final wireframe section 1" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-2.png" alt="Final wireframe section 2" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>I will include these iterations in my portfolio to demonstrate my process from concept to refined prototype, highlighting lessons learned about balancing emotion and usability.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/wireframes-2.png" alt="Wireframe iteration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Group 65.png" alt="Team discussion snapshot" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-and-mockups.png" alt="Mockup exploration" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO2">
+      <h2>LO 2: Front-End Development: Coding, Documentation, and Version Control</h2>
+      <p>Demonstrated through structured project management, organized documentation, and efficient workflow practices.</p>
+      <div class="columns">
+        <div class="col">
+          <h3>Action</h3>
+          <p>I organized Figma files and code repositories into clearly labeled folders, separating design files, feedback assets, and iteration snapshots. I developed a winter-themed HTML/CSS prototype using custom gradients and inverted color palettes, reflecting the emotional tone.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/courcesv1.png" alt="File structure" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/adjustmentsv1.png" alt="Winter theme layout" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/blurred-gradient-abstract-background-with-vivid-primary-colors_58702-1207.avif" alt="Winter gradient concept" onclick="zoomImage(this)">
+          </div>
+        </div>
+        
+        <div class="col">
+          <h3>Feedback</h3>
+          <p>My coach and a UX mentor suggested prioritizing documentation of process over detailed CSS work at this stage. I added detailed comments in code commits and maintained a clear version history to track changes.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/courcesv1 - Copy.png" alt="Repo feedback" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/adjustmentsv2.png" alt="Code iteration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/comparison-versions.png" alt="Theme comparison" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Organizing assets and using version control improved collaboration, making it easier to revert changes and reflect on my design decisions. Clear commit messages acted as mini-reflections on each update.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapesv1.png" alt="Versioned stylescape" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapesv1 - Copy.png" alt="Versioned stylescape copy" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/spotify-layout.png" alt="Prototype in browser" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>In future projects, I will maintain strict file organization and use commit messages strategically to document rationale, ensuring a transparent and efficient workflow.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/creating-stylescapes.png" alt="Refined workflow" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/comparison-versions.png" alt="Workflow iteration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-2.png" alt="Completed build" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO3">
+      <h2>LO 3: Professional Design Tool Proficiency and Iterative Visual Design</h2>
+      <p>Understanding the iterative process and refining designs using professional tools based on feedback.</p>
+      <div class="columns">
+        <div class="col">
+          <h3>Action</h3>
+          <p>I leveraged Figma’s advanced features to build custom gradients, layered textures, and interactive prototypes, integrating original assets, team photography, and lyric-based elements.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-and-mockups.png" alt="Mockups of final design" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Group 65.png" alt="Figma prototype" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/branding-wireframes1.png" alt="Tool proficiency showcase" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Feedback</h3>
+          <p>Peers recommended adding grain and texture for emotional depth, so I incorporated snowy overlays, subtle animations, and layered text to enhance immersion.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-1.png" alt="Texture iteration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-2.png" alt="Animation feedback" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/blurred-gradient-abstract-background-with-vivid-primary-colors_58702-1207.avif" alt="Grain texture" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Mastering components, variants, and prototyping in Figma accelerated my iteration speed and ensured design consistency across versions.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-2.png" alt="Variant usage" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/wireframes-3.png" alt="Consistent layout" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/comparison-versions.png" alt="Design consistency" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>I will further refine my proficiency with prototyping and micro-interaction tools to better convey emotional nuances in future projects.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/figmapack1.png" alt="Future tool exploration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/wireframes-2.png" alt="Planned experiments" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/branding-wireframes1.png" alt="Tool proficiency plan" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO4">
+      <h2>LO 4: Research & Professional Standards</h2>
+      <p>Conducting exploratory research, clear communication, structured teamwork, and professional documentation.</p>
+      <div class="columns">
+        <div class="col">
+          <h3>Action</h3>
+          <p>I gathered primary research from Owen’s Discord messages, Instagram stories, and rough music drafts, then documented key insights in our project brief to guide design decisions.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-24 144251.png" alt="Discord research" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-24 145331.png" alt="Instagram insight" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-24 152212.png" alt="Music draft notes" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Feedback</h3>
+          <p>The client praised the emotional accuracy but noted performance slowdowns. I logged these issues and planned optimizations for image compression and code efficiency.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-05-30 000002.png" alt="Client feedback" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/spotify-layout.png" alt="Performance note" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-and-mockups.png" alt="Feedback reflection" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Combining thorough research with iterative testing ensured the final design resonated emotionally while maintaining functionality, highlighting the need for early performance planning.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-12 115943.png" alt="Emotional resonance" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Group 65.png" alt="Team collaboration" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/image 3.png" alt="Final mockup" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>Next time, I will define performance budgets during research to balance rich visuals with fast load times and smooth interactions.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/spotify-layout.png" alt="Performance plan" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/final-wireframes-2.png" alt="Optimized design" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-1.png" alt="Balanced visuals" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO5">
+      <h2>LO 5: Communication & Presentation</h2>
+      <p>Effectively presenting design decisions and engaging stakeholders.</p>
+      <div class="columns">
+        <div class="col">
+          <h3>Action</h3>
+          <p>I presented alternative style directions and interactive prototypes via Discord, Zoom calls, and our shared board, clearly explaining my emotional design rationale and listening to stakeholder input.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/image 3.png" alt="Presentation slide" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-05-29 233556.png" alt="Client call snapshot" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Group 65.png" alt="Team board" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Feedback</h3>
+          <p>Stakeholders appreciated the visual storytelling but requested clearer calls-to-action; I updated the homepage CTA to feature the lyric tagline more prominently and adjusted button styles.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/branding-wireframes1.png" alt="CTA update" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/spotify-layout.png" alt="Updated CTA layout" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-2.png" alt="Stakeholder approval" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Presenting narrative-driven visuals helped align the team around the project’s emotional core, demonstrating the impact of storytelling in brand communication.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-and-mockups.png" alt="Narrative impact" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/image 3 - Copy.png" alt="Emotional metrics" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-24 145731.png" alt="User reaction" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>I will refine my presentation skills by incorporating real-time polls and quick usability tests during sessions to gather instant feedback and improve engagement.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/creating-stylescapes.png" alt="Future presentation" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/comparison-versions.png" alt="Interactive feedback" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Screenshot 2025-03-24 152212.png" alt="Usability test" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO6">
+      <h2>LO 6: Professional Identity - Reflection</h2>
+      <p>Building a strong personal and professional brand identity through research and experimentation.</p>
+      <div class="columns">
+        <div class="col">
+          <h3>Reflection</h3>
+          <p>Despite setbacks, this branding project offered me a foundation for applying creative thinking to a real client. It clarified my understanding of identity design and communication, while also highlighting how early-stage organization affects late-stage delivery.
+            <ul>
+              <li>Establish clear file hierarchy from Day 1 - Did so later than I should've had.</li>
+              <li>Setup all shared links and folders at project start into a Personal Drive, not only the Student one.</li>
+              <li>Document decisions moe regularly and openly - WhatsApp was sufficient but I believe if I had Docuemnted on a Notion shared file we would have been way moe efficient in that regard.</li>
+              <li>Focus on strong, clear communication with both peers and coach</li>
+              <li>Don’t tolerate poor collaboration—move forward instead of stagnating in absence.</li>
+            </ul>
+            What I hope for next semester:
+            To work on more expressive and challenging projects that help me break creative and social comfort zones. I want to bring more presence and clearer impact into the teamwork process.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapesv1.png" alt="Identity insight" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/blurred-gradient-abstract-background-with-vivid-primary-colors_58702-1207.avif" alt="Brand voice" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/courcesv1.png" alt="Narrative brand" onclick="zoomImage(this)">
+          </div>
+        </div>
+        <div class="col">
+          <h3>Decision</h3>
+          <p>Going forward, I will position myself as a designer focused on emotional resonance and narrative depth, seeking projects that challenge me to blend feeling with function.</p>
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/stylescapes-1.png" alt="Future focus" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/Group 65.png" alt="Professional growth" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/brand-wireframes1.png" alt="Evolution showcase" onclick="zoomImage(this)">
+          </div>
+        </div>
+      </div>
+    </section>
   </template>
 
   <template id="fixux">
     <div>
-      <div class="project-title">Fix UX Project</div>
-      <div class="sub-header">Martin Petkov</div>
-      <p>Fix UX content goes here. Add iframe or description as needed.</p>
+      <h2 class="project-title">Fix UX Project</h2>
+      <p class="sub-header">Martin Petkov</p>
+      <!-- fit the content where it was supposed to be -->
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lG6koIidPxjWp1VY7WlTWv/PICCO-APP?node-id=145-46&embed-host=share" allowfullscreen></iframe>    
+
+      <section class="lo-section" id="LO1">
+        <h2>LO 1: Interactive Media Products</h2>
+        <!-- <p>This learning outcome is demonstrated through prototypes and media concepts that were developed, tested, and refined based on user feedback and UX principles.</p> -->
+
+        <div class="columns">
+          <div class="col">
+            
+            <h3>Action</h3>
+            <p>I designed an interactive quiz app prototype inspired by Picoo’s existing game options, extending the group’s research efforts. My focus was on creating engaging and intuitive visual cues for children, synergizing my concept with the group’s work on the "Custom Quizstafette." I developed a UI template informed by both external research and hands-on testing. To gather authentic user feedback, I conducted interviews and observational user tests, including one with my younger sister.</p>
+
+            <div class="image-row">
+              <!--zoom nnto working all of a sudden-->
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/overview.png" alt="Action 1" onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/overview.png" alt="Action 1" onclick="zoomImage(this)">  
+              
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/iteration1.png" alt="Action 1" onclick="zoomImage(this)">   -->
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/wireframes.png" alt="interview 1" onclick="zoomImage(this)">   -->
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/wireframes2.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/iteration1.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+            </div>
+
+            <h3>Feedback - Interview Documented on Notion</h3>
+            <p>Users expressed the need for clearer visual context, more answer options, and immediate feedback on their responses. They also wanted more colorful and animated elements to increase engagement.</p>
+
+            <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/interview-1.png" alt="interview 1"  onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/interview-2.png" alt="Action 1"  onclick="zoomImage(this)">  
+            </div>
+
+            <h3>Reflection</h3>
+            <p>I realized that structured interview questions alone were insufficient; observing user interactions revealed deeper insights into usability challenges. Visual clarity and playful feedback mechanisms are essential to maintain user interest and improve comprehension, especially for children who are the primary demographic.</p>
+
+            <h3>Decision</h3>
+            <p>Based on these insights, I refined the app by adding 3 types of interactions, with images and choices, instant audio-visual feedback and user options. This user-centric iterative process improved the overall design and usability, aligning with the project goals.</p>
+
+            <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/effect1.png" alt="interview 1"  onclick="zoomImage(this)">
+            </div>
+            <p>1. Shadowed Image Method-shadow overlay on the image being questioned. This makes the visual less obvious at first glance, turning the question into a subtle puzzle. It still provides visual input, but adds a layer of challenge, encouraging users to think critically before answering.
+            </p>
+            <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/effect2.png" alt="Action 1"  onclick="zoomImage(this)">  
+            </div>
+            <p> 2. Blurred Image with Reveal Option- The second method displays a blurred image. Users can choose to reveal the image for extra help or take a chance and guess without assistance. This interaction gives users — especially children — a sense of control, which is key to spontaneous learning and exploration.
+            </p>
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/effect2.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+            <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/effect3.png" alt="Action 1"  onclick="zoomImage(this)">  
+            </div>
+            <p> 3. Reward-Based Visual Feedback
+              The third method presents a regular quiz question enhanced by visual cues to maintain user focus. When the user answers correctly, they are rewarded with a visual treat — such as a GIF or short clip from a related film. This boosts motivation, supports faster comprehension, and creates a more entertaining and educational experience with the Picoo product.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="lo-section" id="LO2">
+      <h2>LO 2: Development & version control – Learning and Reflection</h2>
+      <p>This learning outcome is demonstrated through structured project management, organized documentation, and progress tracking to ensure a professional and efficient workflow.</p>
+
+        <div class="columns">
+          <div class="col">
+            
+            <h3>Action </h3>
+            <p>As part of the Picoo group project, I contributed a detailed UI concept in Figma for a kid-friendly quiz app based on the Quizstafette structure. I focused on translating research and user feedback into a clear visual interface that could later be implemented. My main priority was to solidify the UX/UI and ensure documentation of this process was completed for my portfolio.</p>
+
+            <h3>Feedback - What others said about it</h3>
+            <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/notes(4).png"alt="Action 1"  onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/transcribing-2.png"alt="Action 2"  onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/miscommunication.png"alt="Action 2"  onclick="zoomImage(this)">  
+
+            </div>
+            <p>During the checkpoint presentation, I was asked why there wasn’t a functioning coded prototype yet, and why the concept focused mainly on Quizstafette. The feedback emphasized the importance of not only planning but also implementing front-end components in code — especially since Figma alone doesn't demonstrate full development skills. I was encouraged to move beyond the design stage and showcase coding capability, even if just as a minimal working example.</p>
+
+            <h3>Reflection -  What I learned from it</h3>
+            <p>This feedback reminded me that in front-end development, visual planning and documentation are not enough without also producing coded output. While I defended my process as intentional (to stay organized and not rushed), I realized the importance of showing initiative through small functional builds, especially after presenting my ideas with the UX teachers that dayb who said I must continue this work beyond the UX project deadline, using my Figma concept as a launchpad for a clean and focused implementation into code.</p>
+
+            <h3>Decision</h3>
+            <p>In response, I explained that I had prioritized clear documentation and design first, intending to revisit and code the prototype after finalizing my portfolio structure. I also acknowledged that expanding beyond just the Quizstafette would show better versatility. Therefore, I made the decision to:
+
+              - Revisit my checkpoints after documentation is complete.
+
+              - Begin coding the UI as a working prototype using HTML, CSS, and JavaScript.
+
+              - Use version control (GitHub) to document my progress and iterations.
+
+              - Consider applying the UI framework to a second game type or variation to show broader applicability.
+            </p>
+            
+
+          </div>
+        </div>
+
+    </section>
+    
+    <section class="lo-section" id="LO3">
+      <h2>LO 3: Professional Design Tool Proficiency and Iterative Visual Design</h2>
+      <p>Understanding the iterative process and refining designs based on feedback.</p>
+        <div class="columns">
+          <div class="col">
+            
+            <h3>Action</h3>
+            <p>I used Figma to explore different visual directions, like layering, grain, and gradients. I merged stylescapes and refined layout from feedback. I learned to design with intention, adapting the UI to the artist’s emotional needs.</p>
+            <h3>Feedback</h3>
+            <h3>Decision</h3>
+            <h3>Reflection</h3>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO4">
+      <h2>LO 4: Research & Professional Standards</h2>
+      <p>Conducting appropriate exploratory research methods, practicing clear communication, structured teamwork, and professionally organized documentation and reporting. I researched the artist’s lyrics, moodboards, and tone of voice. I used this to guide my design decisions and document what worked or didn’t. I learned to balance experimental ideas with clarity.
+      </p>
+
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <p>To begin the project, we reviewed the Picoo product and conducted exploratory research by testing it hands-on. This helped us understand its core experience and current limitations.
+          We attempted to reach out to kindergartens for direct user interviews (including OBS Klimboom), as referred by Picoo stakeholders, but did not receive a response. To compensate, I conducted my own user interview with my younger sister, age 13, to observe how children interact with quiz content.
+
+          Our team created a shared set of interview questions and began testing with educators. We also explored competitor platforms such as Kahoot, Quizlet, Socrative, and ClassDojo to analyze existing features, interface design, and game-based learning strategies.
+
+          We brainstormed improvement ideas for the Picoo interface and shared them with stakeholders in follow-up meetings.</p>
+
+          <h3>Feedback</h3>
+
+          <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/transcribing-1.png"alt="Action 1"  onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/transcribing-2.png"alt="Action 2"  onclick="zoomImage(this)">  
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/miscommunication.png"alt="Action 2"  onclick="zoomImage(this)">  
+
+            </div>
+
+
+          <p>From teacher interviews, we learned:
+
+            Many teachers want both custom and pre-made quizzes.
+
+            Laptops or desktops are preferred for quiz creation due to typing ease.
+
+            A common frustration is limited question variety and the static timer.
+
+            Picoo’s strength lies in promoting active, screen-free play, but its interface lacks flexibility.
+
+            From teacher Chris (UX coach), we received key feedback:
+
+            Don’t rely too heavily on structured interview questions.
+
+            Observation-based testing reveals deeper insight.
+
+            Body language, hesitation, and behavior can reveal more than verbal answers.
+
+            Always record or document user sessions with permission.
+
+            From my group:
+
+            I was reminded to stay more involved and consistent. Despite a rough start, I aimed to improve by contributing interviews, user tests, and visual research.</p>
+
+          <h3>Decision</h3>
+          <p>We decided to:
+
+            Adjust our interview questions to be more open-ended and behavior-focused.
+
+            Focus on a specific game mode (Quizstafette) to develop and test a prototype.
+
+            Incorporate visual cues and feedback systems (sound, lights, animation) based on user suggestions.
+
+            Integrate inspiration from ClassDojo and Gartic Phone-style avatars to make our design more engaging for kids.
+
+            While I wasn’t always able to attend every team meeting, I still contributed by exploring and documenting real user interaction with the product, building on the team’s concept direction.
+          </p>
+          <h3>Reflection</h3>
+          <p>This process helped me understand the importance of grounding design in real user needs. While structured questions are helpful, watching users in action — especially children — reveals far more.
+
+          I also learned how stakeholder alignment is crucial. From interview input, to idea validation, to visual decisions, everything ties back to how clearly we understood the people we’re designing for.
+
+          Lastly, this outcome pushed me to reflect on my own contribution. I took ownership of designing and documenting a quiz prototype, inspired by Picoo’s model, even without a kindergarten interview. This balance of individual and team insight shaped a more relevant and human-centered result.</p>
+
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="lo-section" id="LO5">
+      <h2>LO 5: Communication & Presentation</h2>
+      <p>Enhancing project presentations and communicating design decisions effectively.</p>
+
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <p>I established a hiearchy in my files, arranging my files and seeking feedback</p>
+          <h3>Feedback</h3>
+          <p>I was advised by my coach Maikel to keep my structure minimal and functional due to time pressure.
+            I got positive feedback for adding videos of my cleaning process, I explained I was trying to make more proof.
+            I was told to ensure all files and documentation were organized clearly so assessors could navigate my work easily.
+            I was encouraged to include walkthroughs and screenshots to support my written explanations.</p>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO6">
+      <h2>LO 6: Professional Identity</h2>
+      <p>Building a strong personal and professional brand identity through research and experimentation.</p>
+
+      <div class="columns">
+        <div class="col">
+          <h3>Goal - Seeked to reflect in a way that would summarize a large portion of my notes into a prompt</h3>
+          <div class="image-row">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/effect2.png" alt="Action 1"  onclick="zoomImage(this)">  
+            </div>
+          <h3>Action</h3>
+          <p></p>
+          <h3>Feedback</h3>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+      
+    </section>
+       
     </div>
   </template>
 
-  <template id="sprintx">
+  <template id="projectx">
     <div>
-      <div class="project-title">Sprint X Project</div>
-      <div class="sub-header">Martin Petkov</div>
-      <p>Sprint X content goes here. Add iframe or description as needed.</p>
+      <h2 class="project-title">Project X: Picoo Revisit</h2>
+      <p class="sub-header">Martin Petkov</p>
     </div>
+
+    <section class="lo-section" id="LO1">
+      <h2>LO 1: Interactive Media Products</h2>
+      <p>This learning outcome is demonstrated through prototypes and media concepts that were developed, tested, and refined based on user feedback and UX principles.</p>
+
+      <div class="columns">
+        <div class="col">
+            
+          <h3>Goal</h3>
+          <p>GOAL:
+          The goal of the Picoo project was to research, design, and prototype a feature that allows primary school teachers to create custom quiz questions within the Picoo system—an interactive, screen-free gaming platform for children. Our broader goal was to improve the educational flexibility of the Picoo experience while keeping it fun and user-friendly. Although I had missed the final presentation and early reflection moments, I revisited the project in the final two weeks of the semester to thoroughly understand and contribute to the final deliverables.</p>
+          <h3>Action</h3>
+          <p>During Project X, I created wireframes for my personal website by analyzing Spotify’s grid structure and layout. I divided the wireframes into clear sections as shown in the screenshots. I recreated the general layout and integrated my own buttons and interaction elements using Figma. While inspired by Spotify’s visual system, I adapted it to better suit the needs of a portfolio website, focusing on functionality and clarity.</p>
+
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/wireframes-website2.png" alt="Wireframe Homepage Layout" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/wireframes-website3.png" alt="Wireframe with Sections Marked" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/wireframes-website4.png" alt="Wireframe with Spotify-inspired Buttons" onclick="zoomImage(this)">
+          </div>
+
+          <h3>Feedback</h3>
+            <p>My coach advised me to keep the layout minimal and practical due to time constraints. He emphasized prioritizing user experience over visual polish. The feedback led me to simplify the design, ensuring it stayed accessible and user-friendly while still capturing a recognizable music-themed layout.</p>
+
+          <h3>Decision</h3>
+            <p>Based on this feedback, I shifted my focus from stylistic replication to usability. While I initially referenced Spotify’s layout, I eventually drew more inspiration from Bandcamp for its cleaner and more modular approach. I preserved key UI elements (like player buttons and sectional navigation) that support the theme, but adapted the structure to fit the goal of a personal design portfolio.</p>
+
+          <h3>Reflection</h3>
+            <p>This process helped me balance visual inspiration with user needs. By simplifying the grid and layout, I ensured quicker development and easier interaction — something critical for users browsing a portfolio. I also learned that adapting inspiration from known platforms doesn’t mean copying; it’s about remixing what works to fit your own goals.</p>
+
+          
+          <div class="image-row">
+              
+            <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/wireframes-website1png" alt="wireframes"onclick="zoomImage(this)"> -->
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/2.png"alt="wireframes"onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/3.png"alt="wireframes"onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/4.png"alt="wireframes"onclick="zoomImage(this)">
+
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/wireframes2.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/iteration1.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="lo-section" id="LO2">
+      <h2>LO 2: Front-End Development: Coding, Documentation, and Version Control</h2>
+      <p>This learning outcome is demonstrated through structured project management, organized documentation, and progress tracking to ensure a          professional and efficient workflow.</p>
+
+      <div class="columns">
+        <div class="col">
+              <h3>Action</h3>
+              <h3>Feedback</h3>
+              <div class="image-row">
+              
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/wireframes-website1png" alt="wireframes"onclick="zoomImage(this)"> -->
+                          
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (1).jpg" alt="wireframes 1" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (2).jpg" alt="wireframes 2" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (3).jpg" alt="wireframes 3" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (4).jpg" alt="wireframes 4" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (5).jpg" alt="wireframes 5" onclick="zoomImage(this)">
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/wireframes2.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+              <!-- <img src="semester2-module2-cmk2/iterations-projects/ux/PicooUX/iteration1.png" alt="Action 1"  onclick="zoomImage(this)">   -->
+                
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (6).jpg" alt="wireframes 6" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (7).jpg" alt="wireframes 7" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (8).jpg" alt="wireframes 8" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (9).jpg" alt="wireframes 9" onclick="zoomImage(this)">
+              <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (10).jpg" alt="wireframes 10" onclick="zoomImage(this)">
+
+              
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (11).jpg" alt="wireframes 11" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (12).jpg" alt="wireframes 12" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (13).jpg" alt="wireframes 13" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (14).jpg" alt="wireframes 14" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (15).jpg" alt="wireframes 15" onclick="zoomImage(this)">
+            <img src="semester2-module2-cmk2/iterations-projects/ux/portfolioUX/feedbackNotes/notes (16).jpg" alt="wireframes 16" onclick="zoomImage(this)">
+
+
+            </div>
+              <h3>Decision</h3>
+              <h3>Reflection</h3>
+        </div>
+      
+
+          <div class="image-row">
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/i" alt="Action 1"  onclick="zoomImage(this)">  
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/" alt="Action 2" onclick="zoomImage(this)"> 
+            <img src="semester2-module2-cmk2/iterations-projects/branding/figma-wireframes/" alt="Action 3"  onclick="zoomImage(this)">
+          </div>
+
+          <div id="zoom-container" onclick="closeZoom()">
+            <img id="zoomed-img" src="" alt="Zoomed Image">
+          </div> 
+      </div>
+    </section>
+    
+    <section class="lo-section" id="LO3">
+    <h2>LO 3: Professional Design Tool Proficiency and Iterative Visual Design</h2>
+    <p>Understanding the iterative process and refining designs based on feedback.</p>
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <h3>Feedback</h3>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO4">
+      <h2>LO 4: Research & Professional Standards</h2>
+      <p>Conducting appropriate exploratory research methods, practicing clear communication, structured teamwork, and professionally organized documentation and reporting.
+      </p>
+
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <p>I researched the artist’s lyrics, moodboards, and tone of voice. I used this to guide my design decisions and document what worked or didn’t. I learned to balance experimental ideas with clarity.</p>
+          <h3>Feedback</h3>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="lo-section" id="LO5">
+      <h2>LO 5: Communication & Presentation</h2>
+      <p>Enhancing project presentations and communicating design decisions effectively.</p>
+
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <p>I shared my process and visuals in team check-ins and Discord. I explained my ideas clearly through design and took feedback seriously. I respected the artist’s vision by keeping things expressive but accessible.</p>
+          <h3>Feedback</h3>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lo-section" id="LO6">
+      <h2>LO 6: Professional Identity</h2>
+      <p>Building a strong personal and professional brand identity through research and experimentation.</p>
+
+      <div class="columns">
+        <div class="col">
+          
+          <h3>Action</h3>
+          <p>I discovered I’m drawn to emotional design and storytelling. I trusted my instincts and took a creative risk with my winter version. This project helped me better understand what kind of designer I want to become.</p>
+          <h3>Feedback</h3>
+          <h3>Decision</h3>
+          <h3>Reflection</h3>
+
+        </div>
+      </div>
+      
+    </section>
+       
+    </div>
+  
   </template>
 
   <!-- JavaScript -->
@@ -133,6 +795,17 @@
 
     function scrollToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+        function zoomImage(img) {
+      const zoomContainer = document.getElementById('zoom-container');
+      const zoomedImg = document.getElementById('zoomed-img');
+      zoomedImg.src = img.src;
+      zoomContainer.style.display = 'flex';
+    }
+
+    function closeZoom() {
+      document.getElementById('zoom-container').style.display = 'none';
     }
   </script>
 

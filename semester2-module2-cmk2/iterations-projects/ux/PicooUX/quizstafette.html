@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quizstafette</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <a href="picoo.html" class="back-button">&larr; Back to Picoo</a>
+    <div class="quiz-header">
+      <h1 class="page-title">Quizstafette</h1>
+      <h2 class="page-subtitle">
+        <a href="#premade-quizzes" class="tab-link">Pre made quizzes</a> | 
+        <a href="#custom-quizzes" class="tab-link">My custom quizzes</a> | 
+        <a href="#create-quiz" class="tab-link">Create a quiz</a>
+        <button id="reset-tabs">Reset View</button>
+      </h2>
+      <img class="quiz-header-image" src="quiz-removebg-preview.png" alt="Quiz logo" />
+    </div>
+  </header>
+
+  <!-- PREMADE QUIZZES SECTION -->
+  <div id="premade-quizzes" class="games-container">
+    <div class="section-heading">Created by Picoo (curators):</div>
+    
+      <div class="quiz-game-card">
+        <img class="game-image" src="relevant-img(1).png" alt="Add image" />
+        <div class="game-title">
+        <a href="animal-bunch.html">Animal Bunch</a>
+        </div>
+        <div class="game-info">9 questions | age 6+</div>
+    </div>
+
+    <div class="quiz-game-card">
+        <img class="game-image" src="relevant-img(2).png" alt="Add image" />
+        <div class="game-title">
+        <a href="cartoons.html">Cartoons</a>
+        </div>
+        <div class="game-info">13 questions | age 10+</div>
+    </div>
+
+    <div class="quiz-game-card"><img class="game-image" src="relevant-img(3).png" alt="Add image" /><div class="game-title">Nature</div><div class="game-info">7 questions | age 6-9</div></div>
+
+    <div class="quiz-game-card"><img class="game-image" src="relevant-img(4).png" alt="Add image" /><div class="game-title">Music</div><div class="game-info">11 questions | age 10+</div></div>
+
+    <div class="quiz-game-card"><img class="game-image" src="relevant-img(5).png" alt="Add image" /><div class="game-title">Sports</div><div class="game-info">13 questions | age 10+</div></div>
+  </div>
+
+  <!-- CUSTOM QUIZZES SECTION -->
+  <div id="custom-quizzes" class="games-container" style="display:none;">
+    <div class="section-heading">Created by: User (template):</div>
+    <div class="quiz-game-card"><img class="game-image" src="" alt="Add image" /><div class="game-title"><a href="create-game-template.html">+ Create New Game</a></div><div class="game-info">max 20 questions</div></div>
+    <div class="quiz-game-card"><img class="game-image" src="relevant-img(6).png" alt="Add image" /><div class="game-title">Geography Lesson 1</div><div class="game-info">13 questions</div></div>
+    <div class="quiz-game-card"><img class="game-image" src="relevant-img(7).png" alt="Add image" /><div class="game-title">Math</div><div class="game-info">7 questions</div></div>
+  </div>
+
+  <!-- CREATE QUIZ SECTION -->
+  <div id="create-quiz" class="games-container" style="display:none;">
+    <div class="section-heading">Created a Quiz (template):</div>
+    <a href="create-game-template.html">+ Create Your Game</a>
+  </div>
+
+  <script src="function.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Selector</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+  <h1 class="picoo-header">Choose a Game</h1>
+  </header>
+
+  <div id="premade-quizzes" class="games-container">
+    <div class="section-heading">Created by Picoo (curators):</div>
+
+  <div class="game-card">
+    <img class="game-image" src="eye.png" />
+    <div class="game-title">Hide and Seek</div>
+    <div class="game-info">Total players: 2-50<br>Age: 4+</div>
+  </div>
+
+  <div class="game-card">
+    <img class="game-image" src="kahoa.png" />
+    <div class="game-title">Kohoa</div>
+    <div class="game-info">Total players: 2-50<br>Age: 4+</div>
+  </div>
+
+  <div class="game-card">
+    <img class="game-image" src="lightning.png" />
+    <div class="game-title">Lightning Bolt</div>
+    <div class="game-info">Total players: 2-50<br>Age: 4+</div>
+  </div>
+
+  <a href="quizstafette.html" class="game-link">
+    <div class="game-card">
+      <img class="game-image" src="quiz-removebg-preview.png" alt="Quizstafette logo" />
+      <div class="game-title">Quizstafette</div>
+      <div class="game-info">Total players: 1-50<br>Age: 4+</div>
+    </div>
+  </a>
+
+  <div class="game-card">
+    <img class="game-image" src="twikkie.png" />
+    <div class="game-title">Twikkie</div>
+    <div class="game-info">Total players: 6-21<br>Age: 6+</div>
+  </div>
+
+  <div class="game-card">
+    <div class="game-image">Image</div>
+    <div class="game-title">Zombierun</div>
+    <div class="game-info">Total players: 3-50<br>Age: 4+</div>
+  </div>
+
+  <div class="game-card">
+    <a href="create-game-template.html">+ Create Your Game</a>
+    <!-- <div class="game-image">Image</div> -->
+    <div class="game-title">title</div>
+    <div class="game-info">More info<br>Questions: 4+</div>
+  </div>
+
+  <div class="game-card">
+    <div class="quiz-builder">
+    <h2>Custom Quizstafette</h2>
+
+    <label for="quiz-name">Quiz Name</label>
+    <input type="text" id="quiz-name" placeholder="Enter quiz name">
+  </div>
+
+    <div class="question-count">
+      <label>Total Questions</label>
+      <button>-</button>
+      <span>6</span>
+      <button>+</button>
+    </div>
+
+  <div class="question">
+    <h3>Question 1</h3>
+    <input type="text" placeholder="Enter question 1 here">
+
+    <div class="answers">
+      <input type="text" placeholder="Answer 1">
+      <input type="text" placeholder="Answer 2">
+      <input type="text" placeholder="Answer 3">
+      <input type="text" placeholder="Answer 4">
+    </div>
+    <p class="note">Choose correct answers</p>
+  </div>
+
+  <!-- Repeat .question div for Q2, Q3 etc. -->
+
+  <button class="create-quiz-btn">Create Quiz</button>
+</div>
+
+</body>
+</html>

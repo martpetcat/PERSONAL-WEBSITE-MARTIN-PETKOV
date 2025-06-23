@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Bunch Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <a href="picoo.html" class="go-back-button">← Go Back</a>
+  <style>
+    .quiz-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .question-image {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .blur {
+      filter: blur(6px);
+      transition: filter 0.5s ease;
+    }
+    .answer-button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .correct {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .wrong {
+      background-color: #f44336;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+    .next-button {
+      margin-top: 20px;
+      padding: 10px 15px;
+    }
+
+    /* Celebration Effects */
+    #confetti-canvas {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999;
+    }
+
+    .celebration-gif {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      max-width: 200px;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .glow {
+      animation: glowPulse 1s ease-in-out 3;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px 5px gold; }
+      50% { box-shadow: 0 0 20px 10px orange; }
+      100% { box-shadow: 0 0 10px 5px gold; }
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Animal Bunch</h1>
+    <div id="quiz">
+      <img id="question-image" src="" alt="Question Image" class="question-image"/>
+      <h2 id="question-text"></h2>
+      <div id="answer-buttons" class="btn-grid"></div>
+    </div>
+    <button id="next-btn" class="next-button hidden">Next</button>
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <img id="celebration-gif" class="celebration-gif" src="" alt="Celebration" />
+
+  <!-- Load Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    const quizzes = {
+      animalBunch: [
+        {
+          question: "Which animal cannot jump?",
+          answers: ["Lion", "Elephant", "Kangaroo", "Spider"],
+          correct: 1,
+          image: "https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg"
+        },
+        {
+          question: "What is the fastest animal in the world, on land?",
+          answers: ["Tiger", "Lion", "Cheetah", "Snake"],
+          correct: 2,
+          image: "cheetah-running.png"
+        },
+        {
+          question: "How many legs does a spider have?",
+          answers: ["6", "8", "10", "12"],
+          correct: 1,
+          image: "48738-015A17E0-C4F1-4D51-B193-2E1810004D0A-0-1472463746.gif"
+        },
+        {
+          question: "Which animal has the longest neck?",
+          answers: ["Ostrich", "Elephant", "Lama", "Giraffe"],
+          correct: 3,
+          image: "close-up-of-a-giraffes-head-and-neck.jpg",
+          revealImage: "giraffe-answer-reveal.png",
+        },
+        {
+          question: "A ladybug isn't?",
+          answers: ["Red", "Green", "White", "Yellow"],
+          correct: 1,
+          image: "ladybugs-types.jpg",
+          // revealImage: "giraffe-answer-reveal.png",
+        },
+        {
+          question: "Which animal has wings but cannot fly?",
+          answers: ["Penguin", "Duck", "Chicken", "Peacock"],
+          correct: 0,
+          image: "defining-physics.png"
+        },
+        {
+          question: "A panda doesn't eat?",
+          answers: ["Rice", "Leafs", "Bamboo", "Small rodents"],
+          correct: 3,
+          image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG"
+        },
+        {
+          question: "What is the smartest bird in the world?",
+          answers: ["Crow", "Owl", "Stork", "Pigeon"],
+          correct: 0,
+          image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Crow_portrait.jpg"
+        },
+        {
+          question: "Which animal does not hatch an egg?",
+          answers: ["Chicken", "Snake", "Bat", "Ostrich"],
+          correct: 2,
+          image: "https://upload.wikimedia.org/wikipedia/commons/3/37/Fruit_bat_head_2.jpg"
+        }
+      ]
+    };
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let currentQuiz = [];
+
+    function getSafeImageUrl(url) {
+      const blockedImages = [
+        "close-up-of-a-giraffes-head-and-neck.jpg",
+      ];
+
+      for (const blocked of blockedImages) {
+        if (url.includes(blocked)) {
+          return "placeholder.png"; // fallback image or "" to hide the image
+        }
+      }
+      return url;
+    }
+
+    function loadQuiz(name) {
+      currentQuiz = quizzes[name];
+      currentQuestionIndex = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const questionData = currentQuiz[currentQuestionIndex];
+      const questionEl = document.getElementById("question-text");
+      const answerButtons = document.getElementById("answer-buttons");
+      const imageEl = document.getElementById("question-image");
+
+      // Set the question text and image source for the current question
+      questionEl.textContent = questionData.question;
+      imageEl.src = questionData.image;
+      // Apply blur effect to the question image to create suspense before answering
+      imageEl.classList.add("blur");
+
+      // Clear previous answer buttons
+      answerButtons.innerHTML = "";
+      questionData.answers.forEach((text, index) => {
+        const button = document.createElement("button");
+        button.textContent = text;
+        button.classList.add("answer-button");
+        button.addEventListener("click", () => selectAnswer(index));
+        answerButtons.appendChild(button);
+      });
+
+      document.getElementById("next-btn").classList.add("hidden");
+      document.getElementById("result").classList.add("hidden");
+    }
+
+    function selectAnswer(index) {
+      const correct = currentQuiz[currentQuestionIndex].correct;
+      const buttons = document.querySelectorAll(".answer-button");
+      buttons.forEach((btn, i) => {
+        btn.classList.add(i === correct ? "correct" : "wrong");
+        btn.disabled = true;
+      });
+
+      const questionData = currentQuiz[currentQuestionIndex];
+      const imageEl = document.getElementById("question-image");
+
+      // Remove blur when showing reveal image or answer feedback
+      imageEl.classList.remove("blur");
+
+      if (questionData.revealImage) {
+        imageEl.src = questionData.revealImage;
+      }
+
+      if (index === correct) {
+        score++;
+        triggerRandomEffect();
+      }
+
+      document.getElementById("next-btn").classList.remove("hidden");
+    }
+
+    document.getElementById("next-btn").addEventListener("click", () => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < currentQuiz.length) {
+        showQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    function showResult() {
+      document.getElementById("quiz").classList.add("hidden");
+      document.getElementById("next-btn").classList.add("hidden");
+      const resultEl = document.getElementById("result");
+      resultEl.textContent = `You got ${score} out of ${currentQuiz.length} correct!`;
+      resultEl.classList.remove("hidden");
+    }
+
+    function triggerRandomEffect() {
+      const effects = [triggerConfetti, showCelebrationGif, addGlowEffect];
+      const randomEffect = effects[Math.floor(Math.random() * effects.length)];
+      randomEffect();
+    }
+
+    function triggerConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+
+    function showCelebrationGif() {
+      const gifEl = document.getElementById("celebration-gif");
+      const gifs = [
+        // "https://media.giphy.com/media/xUPGcgtKxmKXbV7c8o/giphy.gif",
+      ];
+      gifEl.src = gifs[Math.floor(Math.random() * gifs.length)];
+      gifEl.style.display = "block";
+      setTimeout(() => gifEl.style.display = "none", 2500);
+    }
+
+    function addGlowEffect() {
+      const img = document.getElementById("question-image");
+      img.classList.add("glow");
+      setTimeout(() => img.classList.remove("glow"), 3000);
+    }
+
+    loadQuiz("animalBunch");
+  </script>
+</body>
+</html>
